@@ -1,0 +1,1829 @@
+[
+    {
+        "Use Case": "UC_01: Đăng ký",
+        "TC ID": "TC_01_01",
+        "Tên kịch bản kiểm thử": "Đăng ký thành công với đầy đủ thông tin hợp lệ",
+        "Mức độ ưu tiên": "High",
+        "Các bước thực hiện": "1. Vào Register. 2. Nhập thông tin hợp lệ. 3. Tích Privacy. 4. Continue.",
+        "Dữ liệu kiểm thử": "Email: new@test.com, Pass: 123456",
+        "Kết quả mong đợi": "Hiển thị \"Your Account Has Been Created!\". Lưu vào bảng customer."
+    },
+    {
+        "Use Case": "UC_01: Đăng ký",
+        "TC ID": "TC_01_02",
+        "Tên kịch bản kiểm thử": "Kiểm tra lỗi khi đăng ký với Email đã tồn tại",
+        "Mức độ ưu tiên": "High",
+        "Các bước thực hiện": "1. Nhập Email cũ đã đăng ký. 2. Nhập các trường khác đúng. 3. Continue.",
+        "Dữ liệu kiểm thử": "Email: shin@test.com (đã có)",
+        "Kết quả mong đợi": "Cảnh báo: \"Warning: E-Mail Address is already registered!\"."
+    },
+    {
+        "Use Case": "UC_01: Đăng ký",
+        "TC ID": "TC_01_03",
+        "Tên kịch bản kiểm thử": "Kiểm tra lỗi khi mật khẩu và xác nhận mật khẩu không khớp",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Nhập Pass: 123. 2. Nhập Confirm: 456. 3. Nhấn Continue.",
+        "Dữ liệu kiểm thử": "Pass: 123, Confirm: 456",
+        "Kết quả mong đợi": "Cảnh báo: \"Password confirmation does not match password!\"."
+    },
+    {
+        "Use Case": "UC_01: Đăng ký",
+        "TC ID": "TC_01_04",
+        "Tên kịch bản kiểm thử": "Kiểm tra lỗi khi bỏ trống các trường bắt buộc",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Để trống First Name. 2. Nhập các trường khác đúng. 3. Continue.",
+        "Dữ liệu kiểm thử": "First Name: [Trống]",
+        "Kết quả mong đợi": "Cảnh báo: \"First Name must be between 1 and 32 characters!\"."
+    },
+    {
+        "Use Case": "UC_01: Đăng ký",
+        "TC ID": "TC_01_05",
+        "Tên kịch bản kiểm thử": "Kiểm tra đăng ký khi chưa tích chọn \"Privacy Policy\"",
+        "Mức độ ưu tiên": "Low",
+        "Các bước thực hiện": "1. Nhập đủ thông tin. 2. Không tích Privacy Policy. 3. Continue.",
+        "Dữ liệu kiểm thử": "Privacy: [Unchecked]",
+        "Kết quả mong đợi": "Cảnh báo: \"Warning: You must agree to the Privacy Policy!\"."
+    },
+    {
+        "Use Case": "UC_01: Đăng ký",
+        "TC ID": "TC_01_06",
+        "Tên kịch bản kiểm thử": "Đăng ký với Email sai định dạng",
+        "Mức độ ưu tiên": "High",
+        "Các bước thực hiện": "1. Vào Register. 2. Nhập dữ liệu theo kịch bản 'Đăng ký với Email sai định dạng'. 3. Tích Privacy nếu dữ liệu hợp lệ. 4. Continue.",
+        "Dữ liệu kiểm thử": "Thông tin đăng ký theo điều kiện test case",
+        "Kết quả mong đợi": "Hệ thống validate đúng, tạo tài khoản khi hợp lệ hoặc hiển thị cảnh báo khi dữ liệu không hợp lệ."
+    },
+    {
+        "Use Case": "UC_01: Đăng ký",
+        "TC ID": "TC_01_07",
+        "Tên kịch bản kiểm thử": "Đăng ký với mật khẩu ngắn hơn cấu hình tối thiểu",
+        "Mức độ ưu tiên": "High",
+        "Các bước thực hiện": "1. Vào Register. 2. Nhập dữ liệu theo kịch bản 'Đăng ký với mật khẩu ngắn hơn cấu hình tối thiểu'. 3. Tích Privacy nếu dữ liệu hợp lệ. 4. Continue.",
+        "Dữ liệu kiểm thử": "Thông tin đăng ký theo điều kiện test case",
+        "Kết quả mong đợi": "Hệ thống validate đúng, tạo tài khoản khi hợp lệ hoặc hiển thị cảnh báo khi dữ liệu không hợp lệ."
+    },
+    {
+        "Use Case": "UC_01: Đăng ký",
+        "TC ID": "TC_01_08",
+        "Tên kịch bản kiểm thử": "Đăng ký với số điện thoại chứa ký tự chữ",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Vào Register. 2. Nhập dữ liệu theo kịch bản 'Đăng ký với số điện thoại chứa ký tự chữ'. 3. Tích Privacy nếu dữ liệu hợp lệ. 4. Continue.",
+        "Dữ liệu kiểm thử": "Thông tin đăng ký theo điều kiện test case",
+        "Kết quả mong đợi": "Hệ thống validate đúng, tạo tài khoản khi hợp lệ hoặc hiển thị cảnh báo khi dữ liệu không hợp lệ."
+    },
+    {
+        "Use Case": "UC_01: Đăng ký",
+        "TC ID": "TC_01_09",
+        "Tên kịch bản kiểm thử": "Đăng ký với First Name vượt quá độ dài cho phép",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Vào Register. 2. Nhập dữ liệu theo kịch bản 'Đăng ký với First Name vượt quá độ dài cho phép'. 3. Tích Privacy nếu dữ liệu hợp lệ. 4. Continue.",
+        "Dữ liệu kiểm thử": "Thông tin đăng ký theo điều kiện test case",
+        "Kết quả mong đợi": "Hệ thống validate đúng, tạo tài khoản khi hợp lệ hoặc hiển thị cảnh báo khi dữ liệu không hợp lệ."
+    },
+    {
+        "Use Case": "UC_01: Đăng ký",
+        "TC ID": "TC_01_10",
+        "Tên kịch bản kiểm thử": "Đăng ký với Last Name vượt quá độ dài cho phép",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Vào Register. 2. Nhập dữ liệu theo kịch bản 'Đăng ký với Last Name vượt quá độ dài cho phép'. 3. Tích Privacy nếu dữ liệu hợp lệ. 4. Continue.",
+        "Dữ liệu kiểm thử": "Thông tin đăng ký theo điều kiện test case",
+        "Kết quả mong đợi": "Hệ thống validate đúng, tạo tài khoản khi hợp lệ hoặc hiển thị cảnh báo khi dữ liệu không hợp lệ."
+    },
+    {
+        "Use Case": "UC_02: Đăng nhập",
+        "TC ID": "TC_02_01",
+        "Tên kịch bản kiểm thử": "Đăng nhập thành công với tài khoản đúng",
+        "Mức độ ưu tiên": "High",
+        "Các bước thực hiện": "1. Nhập Email/Pass hợp lệ. 2. Nhấn Login.",
+        "Dữ liệu kiểm thử": "shin@test.com / 123456",
+        "Kết quả mong đợi": "Chuyển hướng về My Account. Session được khởi tạo."
+    },
+    {
+        "Use Case": "UC_02: Đăng nhập",
+        "TC ID": "TC_02_02",
+        "Tên kịch bản kiểm thử": "Kiểm tra lỗi khi nhập sai mật khẩu",
+        "Mức độ ưu tiên": "High",
+        "Các bước thực hiện": "1. Nhập Email đúng. 2. Nhập Pass sai. 3. Nhấn Login.",
+        "Dữ liệu kiểm thử": "Pass: wrongpass",
+        "Kết quả mong đợi": "Cảnh báo: \"Warning: No match for E-Mail Address and/or Password.\"."
+    },
+    {
+        "Use Case": "UC_02: Đăng nhập",
+        "TC ID": "TC_02_03",
+        "Tên kịch bản kiểm thử": "Kiểm tra lỗi khi nhập Email chưa đăng ký",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Nhập Email lạ chưa từng đăng ký. 2. Nhấn Login.",
+        "Dữ liệu kiểm thử": "Email: unknown@test.com",
+        "Kết quả mong đợi": "Cảnh báo: \"Warning: No match for E-Mail Address and/or Password.\"."
+    },
+    {
+        "Use Case": "UC_02: Đăng nhập",
+        "TC ID": "TC_02_04",
+        "Tên kịch bản kiểm thử": "Kiểm tra chức năng \"Quên mật khẩu\"",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Nhập thông tin tài khoản bị khóa (nhập sai 5 lần). 2. Login.",
+        "Dữ liệu kiểm thử": "Account: locked_user",
+        "Kết quả mong đợi": "Cảnh báo: \"Warning: Your account has exceeded login attempts.\"."
+    },
+    {
+        "Use Case": "UC_02: Đăng nhập",
+        "TC ID": "TC_02_05",
+        "Tên kịch bản kiểm thử": "Kiểm tra đăng nhập với tài khoản đang bị khóa",
+        "Mức độ ưu tiên": "High",
+        "Các bước thực hiện": "1. Nhấn Forgotten Password. 2. Nhập Email. 3. Continue.",
+        "Dữ liệu kiểm thử": "Email: shin@test.com",
+        "Kết quả mong đợi": "Báo: \"An email with a confirmation link has been sent.\"."
+    },
+    {
+        "Use Case": "UC_02: Đăng nhập",
+        "TC ID": "TC_02_06",
+        "Tên kịch bản kiểm thử": "Đăng nhập với Email có chữ hoa/thường khác nhau",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Vào Login. 2. Nhập tài khoản theo kịch bản 'Đăng nhập với Email có chữ hoa/thường khác nhau'. 3. Nhấn Login hoặc thực hiện thao tác liên quan.",
+        "Dữ liệu kiểm thử": "Email/Password/tài khoản theo điều kiện test case",
+        "Kết quả mong đợi": "Hệ thống đăng nhập, cảnh báo hoặc chuyển hướng đúng theo trạng thái tài khoản."
+    },
+    {
+        "Use Case": "UC_02: Đăng nhập",
+        "TC ID": "TC_02_07",
+        "Tên kịch bản kiểm thử": "Đăng nhập với trường Email bỏ trống",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Vào Login. 2. Nhập tài khoản theo kịch bản 'Đăng nhập với trường Email bỏ trống'. 3. Nhấn Login hoặc thực hiện thao tác liên quan.",
+        "Dữ liệu kiểm thử": "Email/Password/tài khoản theo điều kiện test case",
+        "Kết quả mong đợi": "Hệ thống đăng nhập, cảnh báo hoặc chuyển hướng đúng theo trạng thái tài khoản."
+    },
+    {
+        "Use Case": "UC_02: Đăng nhập",
+        "TC ID": "TC_02_08",
+        "Tên kịch bản kiểm thử": "Đăng nhập với trường Password bỏ trống",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Vào Login. 2. Nhập tài khoản theo kịch bản 'Đăng nhập với trường Password bỏ trống'. 3. Nhấn Login hoặc thực hiện thao tác liên quan.",
+        "Dữ liệu kiểm thử": "Email/Password/tài khoản theo điều kiện test case",
+        "Kết quả mong đợi": "Hệ thống đăng nhập, cảnh báo hoặc chuyển hướng đúng theo trạng thái tài khoản."
+    },
+    {
+        "Use Case": "UC_02: Đăng nhập",
+        "TC ID": "TC_02_09",
+        "Tên kịch bản kiểm thử": "Đăng nhập nhiều lần sai liên tiếp để kiểm tra giới hạn login attempt",
+        "Mức độ ưu tiên": "High",
+        "Các bước thực hiện": "1. Vào Login. 2. Nhập tài khoản theo kịch bản 'Đăng nhập nhiều lần sai liên tiếp để kiểm tra giới hạn login attempt'. 3. Nhấn Login hoặc thực hiện thao tác liên quan.",
+        "Dữ liệu kiểm thử": "Email/Password/tài khoản theo điều kiện test case",
+        "Kết quả mong đợi": "Hệ thống đăng nhập, cảnh báo hoặc chuyển hướng đúng theo trạng thái tài khoản."
+    },
+    {
+        "Use Case": "UC_02: Đăng nhập",
+        "TC ID": "TC_02_10",
+        "Tên kịch bản kiểm thử": "Đăng nhập sau khi reset mật khẩu thành công",
+        "Mức độ ưu tiên": "High",
+        "Các bước thực hiện": "1. Vào Login. 2. Nhập tài khoản theo kịch bản 'Đăng nhập sau khi reset mật khẩu thành công'. 3. Nhấn Login hoặc thực hiện thao tác liên quan.",
+        "Dữ liệu kiểm thử": "Email/Password/tài khoản theo điều kiện test case",
+        "Kết quả mong đợi": "Hệ thống đăng nhập, cảnh báo hoặc chuyển hướng đúng theo trạng thái tài khoản."
+    },
+    {
+        "Use Case": "UC_03: Đăng xuất",
+        "TC ID": "TC_03_01",
+        "Tên kịch bản kiểm thử": "Đăng xuất thành công và hủy Session làm việc",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Nhấn Logout trên menu.",
+        "Dữ liệu kiểm thử": "Session: Active",
+        "Kết quả mong đợi": "Báo \"Account Logout\". Session bị hủy trên server."
+    },
+    {
+        "Use Case": "UC_03: Đăng xuất",
+        "TC ID": "TC_03_02",
+        "Tên kịch bản kiểm thử": "Kiểm tra truy cập lại trang Account sau khi đã Logout",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Logout thành công. 2. Nhấn phím Back trình duyệt.",
+        "Dữ liệu kiểm thử": "History: Back",
+        "Kết quả mong đợi": "Hệ thống yêu cầu Login, không xem được My Account."
+    },
+    {
+        "Use Case": "UC_03: Đăng xuất",
+        "TC ID": "TC_03_03",
+        "Tên kịch bản kiểm thử": "Đăng xuất rồi dùng nút Back của trình duyệt để vào trang Account",
+        "Mức độ ưu tiên": "High",
+        "Các bước thực hiện": "1. Treo máy hết thời gian session config. 2. F5 trang.",
+        "Dữ liệu kiểm thử": "Timeout: 30p",
+        "Kết quả mong đợi": "Tự động đăng xuất và đẩy về trang Login."
+    },
+    {
+        "Use Case": "UC_03: Đăng xuất",
+        "TC ID": "TC_03_04",
+        "Tên kịch bản kiểm thử": "Đăng xuất từ menu header khi đang ở trang giỏ hàng",
+        "Mức độ ưu tiên": "Low",
+        "Các bước thực hiện": "1. Đăng nhập tài khoản. 2. Thực hiện kịch bản 'Đăng xuất từ menu header khi đang ở trang giỏ hàng'. 3. Kiểm tra lại Account/session.",
+        "Dữ liệu kiểm thử": "Session/cookie/trạng thái đăng nhập theo test case",
+        "Kết quả mong đợi": "Session bị hủy hoặc bị yêu cầu đăng nhập lại đúng theo kịch bản."
+    },
+    {
+        "Use Case": "UC_03: Đăng xuất",
+        "TC ID": "TC_03_05",
+        "Tên kịch bản kiểm thử": "Đăng xuất khi có sản phẩm trong giỏ và kiểm tra trạng thái giỏ",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Đăng nhập tài khoản. 2. Thực hiện kịch bản 'Đăng xuất khi có sản phẩm trong giỏ và kiểm tra trạng thái giỏ'. 3. Kiểm tra lại Account/session.",
+        "Dữ liệu kiểm thử": "Session/cookie/trạng thái đăng nhập theo test case",
+        "Kết quả mong đợi": "Session bị hủy hoặc bị yêu cầu đăng nhập lại đúng theo kịch bản."
+    },
+    {
+        "Use Case": "UC_03: Đăng xuất",
+        "TC ID": "TC_03_06",
+        "Tên kịch bản kiểm thử": "Đăng xuất ở một tab và kiểm tra tab khác không còn truy cập Account",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Đăng nhập tài khoản. 2. Thực hiện kịch bản 'Đăng xuất ở một tab và kiểm tra tab khác không còn truy cập Account'. 3. Kiểm tra lại Account/session.",
+        "Dữ liệu kiểm thử": "Session/cookie/trạng thái đăng nhập theo test case",
+        "Kết quả mong đợi": "Session bị hủy hoặc bị yêu cầu đăng nhập lại đúng theo kịch bản."
+    },
+    {
+        "Use Case": "UC_03: Đăng xuất",
+        "TC ID": "TC_03_07",
+        "Tên kịch bản kiểm thử": "Gọi trực tiếp URL logout khi chưa đăng nhập",
+        "Mức độ ưu tiên": "Low",
+        "Các bước thực hiện": "1. Đăng nhập tài khoản. 2. Thực hiện kịch bản 'Gọi trực tiếp URL logout khi chưa đăng nhập'. 3. Kiểm tra lại Account/session.",
+        "Dữ liệu kiểm thử": "Session/cookie/trạng thái đăng nhập theo test case",
+        "Kết quả mong đợi": "Session bị hủy hoặc bị yêu cầu đăng nhập lại đúng theo kịch bản."
+    },
+    {
+        "Use Case": "UC_03: Đăng xuất",
+        "TC ID": "TC_03_08",
+        "Tên kịch bản kiểm thử": "Đăng xuất sau khi vừa cập nhật thông tin cá nhân",
+        "Mức độ ưu tiên": "Low",
+        "Các bước thực hiện": "1. Đăng nhập tài khoản. 2. Thực hiện kịch bản 'Đăng xuất sau khi vừa cập nhật thông tin cá nhân'. 3. Kiểm tra lại Account/session.",
+        "Dữ liệu kiểm thử": "Session/cookie/trạng thái đăng nhập theo test case",
+        "Kết quả mong đợi": "Session bị hủy hoặc bị yêu cầu đăng nhập lại đúng theo kịch bản."
+    },
+    {
+        "Use Case": "UC_03: Đăng xuất",
+        "TC ID": "TC_03_09",
+        "Tên kịch bản kiểm thử": "Đăng xuất sau khi đặt hàng thành công",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Đăng nhập tài khoản. 2. Thực hiện kịch bản 'Đăng xuất sau khi đặt hàng thành công'. 3. Kiểm tra lại Account/session.",
+        "Dữ liệu kiểm thử": "Session/cookie/trạng thái đăng nhập theo test case",
+        "Kết quả mong đợi": "Session bị hủy hoặc bị yêu cầu đăng nhập lại đúng theo kịch bản."
+    },
+    {
+        "Use Case": "UC_03: Đăng xuất",
+        "TC ID": "TC_03_10",
+        "Tên kịch bản kiểm thử": "Kiểm tra cookie/session id thay đổi sau đăng nhập lại",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Đăng nhập tài khoản. 2. Thực hiện kịch bản 'Kiểm tra cookie/session id thay đổi sau đăng nhập lại'. 3. Kiểm tra lại Account/session.",
+        "Dữ liệu kiểm thử": "Session/cookie/trạng thái đăng nhập theo test case",
+        "Kết quả mong đợi": "Session bị hủy hoặc bị yêu cầu đăng nhập lại đúng theo kịch bản."
+    },
+    {
+        "Use Case": "UC_04: Xem DS SP",
+        "TC ID": "TC_04_01",
+        "Tên kịch bản kiểm thử": "Hiển thị danh sách sản phẩm theo danh mục cha/con",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Chọn Category Laptops từ menu.",
+        "Dữ liệu kiểm thử": "Category: Laptops",
+        "Kết quả mong đợi": "Hiển thị chính xác các SP thuộc nhóm Laptops."
+    },
+    {
+        "Use Case": "UC_04: Xem DS SP",
+        "TC ID": "TC_04_02",
+        "Tên kịch bản kiểm thử": "Kiểm tra phân trang khi danh mục có nhiều SP",
+        "Mức độ ưu tiên": "Low",
+        "Các bước thực hiện": "1. Nhấn icon Grid. 2. Nhấn icon List.",
+        "Dữ liệu kiểm thử": "Action: Toggle",
+        "Kết quả mong đợi": "Giao diện thay đổi cách trình bày sản phẩm tương ứng."
+    },
+    {
+        "Use Case": "UC_04: Xem DS SP",
+        "TC ID": "TC_04_03",
+        "Tên kịch bản kiểm thử": "Thay đổi kiểu hiển thị danh sách",
+        "Mức độ ưu tiên": "Low",
+        "Các bước thực hiện": "1. Chọn danh mục mới tạo chưa có SP.",
+        "Dữ liệu kiểm thử": "Cat: Empty",
+        "Kết quả mong đợi": "Hiện: \"There are no products to list in this category.\"."
+    },
+    {
+        "Use Case": "UC_04: Xem DS SP",
+        "TC ID": "TC_04_04",
+        "Tên kịch bản kiểm thử": "Hiển thị danh mục không có sản phẩm",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Vào Storefront. 2. Mở danh mục sản phẩm. 3. Thực hiện kịch bản 'Hiển thị danh mục không có sản phẩm'.",
+        "Dữ liệu kiểm thử": "Category/Product list theo điều kiện test case",
+        "Kết quả mong đợi": "Danh sách sản phẩm hiển thị, sắp xếp, phân trang hoặc đổi kiểu xem đúng."
+    },
+    {
+        "Use Case": "UC_04: Xem DS SP",
+        "TC ID": "TC_04_05",
+        "Tên kịch bản kiểm thử": "Sắp xếp sản phẩm theo tên A-Z",
+        "Mức độ ưu tiên": "Low",
+        "Các bước thực hiện": "1. Vào Storefront. 2. Mở danh mục sản phẩm. 3. Thực hiện kịch bản 'Sắp xếp sản phẩm theo tên A-Z'.",
+        "Dữ liệu kiểm thử": "Category/Product list theo điều kiện test case",
+        "Kết quả mong đợi": "Danh sách sản phẩm hiển thị, sắp xếp, phân trang hoặc đổi kiểu xem đúng."
+    },
+    {
+        "Use Case": "UC_04: Xem DS SP",
+        "TC ID": "TC_04_06",
+        "Tên kịch bản kiểm thử": "Sắp xếp sản phẩm theo giá tăng dần",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Vào Storefront. 2. Mở danh mục sản phẩm. 3. Thực hiện kịch bản 'Sắp xếp sản phẩm theo giá tăng dần'.",
+        "Dữ liệu kiểm thử": "Category/Product list theo điều kiện test case",
+        "Kết quả mong đợi": "Danh sách sản phẩm hiển thị, sắp xếp, phân trang hoặc đổi kiểu xem đúng."
+    },
+    {
+        "Use Case": "UC_04: Xem DS SP",
+        "TC ID": "TC_04_07",
+        "Tên kịch bản kiểm thử": "Sắp xếp sản phẩm theo giá giảm dần",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Vào Storefront. 2. Mở danh mục sản phẩm. 3. Thực hiện kịch bản 'Sắp xếp sản phẩm theo giá giảm dần'.",
+        "Dữ liệu kiểm thử": "Category/Product list theo điều kiện test case",
+        "Kết quả mong đợi": "Danh sách sản phẩm hiển thị, sắp xếp, phân trang hoặc đổi kiểu xem đúng."
+    },
+    {
+        "Use Case": "UC_04: Xem DS SP",
+        "TC ID": "TC_04_08",
+        "Tên kịch bản kiểm thử": "Thay đổi số lượng sản phẩm hiển thị mỗi trang",
+        "Mức độ ưu tiên": "Low",
+        "Các bước thực hiện": "1. Vào Storefront. 2. Mở danh mục sản phẩm. 3. Thực hiện kịch bản 'Thay đổi số lượng sản phẩm hiển thị mỗi trang'.",
+        "Dữ liệu kiểm thử": "Category/Product list theo điều kiện test case",
+        "Kết quả mong đợi": "Danh sách sản phẩm hiển thị, sắp xếp, phân trang hoặc đổi kiểu xem đúng."
+    },
+    {
+        "Use Case": "UC_04: Xem DS SP",
+        "TC ID": "TC_04_09",
+        "Tên kịch bản kiểm thử": "Kiểm tra hiển thị sản phẩm hết hàng trong danh mục",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Vào Storefront. 2. Mở danh mục sản phẩm. 3. Thực hiện kịch bản 'Kiểm tra hiển thị sản phẩm hết hàng trong danh mục'.",
+        "Dữ liệu kiểm thử": "Category/Product list theo điều kiện test case",
+        "Kết quả mong đợi": "Danh sách sản phẩm hiển thị, sắp xếp, phân trang hoặc đổi kiểu xem đúng."
+    },
+    {
+        "Use Case": "UC_04: Xem DS SP",
+        "TC ID": "TC_04_10",
+        "Tên kịch bản kiểm thử": "Kiểm tra breadcrumb đúng khi vào danh mục con",
+        "Mức độ ưu tiên": "Low",
+        "Các bước thực hiện": "1. Vào Storefront. 2. Mở danh mục sản phẩm. 3. Thực hiện kịch bản 'Kiểm tra breadcrumb đúng khi vào danh mục con'.",
+        "Dữ liệu kiểm thử": "Category/Product list theo điều kiện test case",
+        "Kết quả mong đợi": "Danh sách sản phẩm hiển thị, sắp xếp, phân trang hoặc đổi kiểu xem đúng."
+    },
+    {
+        "Use Case": "UC_05: Tìm kiếm",
+        "TC ID": "TC_05_01",
+        "Tên kịch bản kiểm thử": "Tìm kiếm chính xác theo tên sản phẩm hoàn chỉnh",
+        "Mức độ ưu tiên": "High",
+        "Các bước thực hiện": "1. Nhập 'iPhone' vào ô Search. 2. Enter.",
+        "Dữ liệu kiểm thử": "Key: 'iPhone'",
+        "Kết quả mong đợi": "Hiện đúng SP iPhone và thông tin liên quan."
+    },
+    {
+        "Use Case": "UC_05: Tìm kiếm",
+        "TC ID": "TC_05_02",
+        "Tên kịch bản kiểm thử": "Tìm kiếm theo một phần tên sản phẩm",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Nhập 'Mac'. 2. Search.",
+        "Dữ liệu kiểm thử": "Key: 'Mac'",
+        "Kết quả mong đợi": "Hiện các SP chứa từ 'Mac' (MacBook, iMac...)."
+    },
+    {
+        "Use Case": "UC_05: Tìm kiếm",
+        "TC ID": "TC_05_03",
+        "Tên kịch bản kiểm thử": "Hiển thị thông báo khi không tìm thấy kết quả",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Nhập 'random123'. 2. Search.",
+        "Dữ liệu kiểm thử": "Key: 'random123'",
+        "Kết quả mong đợi": "Báo: \"There is no product that matches search criteria.\"."
+    },
+    {
+        "Use Case": "UC_05: Tìm kiếm",
+        "TC ID": "TC_05_04",
+        "Tên kịch bản kiểm thử": "Tìm kiếm sản phẩm trong danh mục cụ thể",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Search. 2. Tích 'Search in subcategories'.",
+        "Dữ liệu kiểm thử": "Sub-cat check",
+        "Kết quả mong đợi": "Kết quả bao gồm SP trong các sub-categories."
+    },
+    {
+        "Use Case": "UC_05: Tìm kiếm",
+        "TC ID": "TC_05_05",
+        "Tên kịch bản kiểm thử": "Tìm kiếm với từ khóa viết hoa/thường khác nhau",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Nhập từ khóa vào ô Search. 2. Chọn tùy chọn tìm kiếm nếu cần. 3. Search.",
+        "Dữ liệu kiểm thử": "Keyword/category/tùy chọn theo test case",
+        "Kết quả mong đợi": "Kết quả tìm kiếm đúng tiêu chí hoặc hiển thị thông báo không có kết quả."
+    },
+    {
+        "Use Case": "UC_05: Tìm kiếm",
+        "TC ID": "TC_05_06",
+        "Tên kịch bản kiểm thử": "Tìm kiếm với từ khóa có khoảng trắng đầu/cuối",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Nhập từ khóa vào ô Search. 2. Chọn tùy chọn tìm kiếm nếu cần. 3. Search.",
+        "Dữ liệu kiểm thử": "Keyword/category/tùy chọn theo test case",
+        "Kết quả mong đợi": "Kết quả tìm kiếm đúng tiêu chí hoặc hiển thị thông báo không có kết quả."
+    },
+    {
+        "Use Case": "UC_05: Tìm kiếm",
+        "TC ID": "TC_05_07",
+        "Tên kịch bản kiểm thử": "Tìm kiếm với ký tự đặc biệt",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Nhập từ khóa vào ô Search. 2. Chọn tùy chọn tìm kiếm nếu cần. 3. Search.",
+        "Dữ liệu kiểm thử": "Keyword/category/tùy chọn theo test case",
+        "Kết quả mong đợi": "Kết quả tìm kiếm đúng tiêu chí hoặc hiển thị thông báo không có kết quả."
+    },
+    {
+        "Use Case": "UC_05: Tìm kiếm",
+        "TC ID": "TC_05_08",
+        "Tên kịch bản kiểm thử": "Tìm kiếm với từ khóa quá ngắn",
+        "Mức độ ưu tiên": "Low",
+        "Các bước thực hiện": "1. Nhập từ khóa vào ô Search. 2. Chọn tùy chọn tìm kiếm nếu cần. 3. Search.",
+        "Dữ liệu kiểm thử": "Keyword/category/tùy chọn theo test case",
+        "Kết quả mong đợi": "Kết quả tìm kiếm đúng tiêu chí hoặc hiển thị thông báo không có kết quả."
+    },
+    {
+        "Use Case": "UC_05: Tìm kiếm",
+        "TC ID": "TC_05_09",
+        "Tên kịch bản kiểm thử": "Tìm kiếm theo mô tả sản phẩm khi bật tùy chọn search in description",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Nhập từ khóa vào ô Search. 2. Chọn tùy chọn tìm kiếm nếu cần. 3. Search.",
+        "Dữ liệu kiểm thử": "Keyword/category/tùy chọn theo test case",
+        "Kết quả mong đợi": "Kết quả tìm kiếm đúng tiêu chí hoặc hiển thị thông báo không có kết quả."
+    },
+    {
+        "Use Case": "UC_05: Tìm kiếm",
+        "TC ID": "TC_05_10",
+        "Tên kịch bản kiểm thử": "Tìm kiếm theo model sản phẩm",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Nhập từ khóa vào ô Search. 2. Chọn tùy chọn tìm kiếm nếu cần. 3. Search.",
+        "Dữ liệu kiểm thử": "Keyword/category/tùy chọn theo test case",
+        "Kết quả mong đợi": "Kết quả tìm kiếm đúng tiêu chí hoặc hiển thị thông báo không có kết quả."
+    },
+    {
+        "Use Case": "UC_06: Lọc SP",
+        "TC ID": "TC_06_01",
+        "Tên kịch bản kiểm thử": "Lọc sản phẩm theo khoảng giá hợp lệ",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Nhập khoảng giá 100-200.",
+        "Dữ liệu kiểm thử": "Range: 100-200",
+        "Kết quả mong đợi": "Chỉ hiển thị SP có giá từ 100$ đến 200$."
+    },
+    {
+        "Use Case": "UC_06: Lọc SP",
+        "TC ID": "TC_06_02",
+        "Tên kịch bản kiểm thử": "Lọc sản phẩm theo thương hiệu",
+        "Mức độ ưu tiên": "Low",
+        "Các bước thực hiện": "1. Tích chọn Apple ở cột Filter.",
+        "Dữ liệu kiểm thử": "Brand: Apple",
+        "Kết quả mong đợi": "Chỉ hiển thị các sản phẩm của Apple."
+    },
+    {
+        "Use Case": "UC_06: Lọc SP",
+        "TC ID": "TC_06_03",
+        "Tên kịch bản kiểm thử": "Kết hợp lọc giá và lọc thương hiệu đồng thời",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Chọn Apple + Giá 500-1000.",
+        "Dữ liệu kiểm thử": "Apple + 500-1000",
+        "Kết quả mong đợi": "Kết quả thỏa mãn đồng thời cả 2 điều kiện lọc."
+    },
+    {
+        "Use Case": "UC_06: Lọc SP",
+        "TC ID": "TC_06_04",
+        "Tên kịch bản kiểm thử": "Lọc với giá tối thiểu lớn hơn giá tối đa",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Vào danh mục có bộ lọc. 2. Chọn điều kiện theo kịch bản 'Lọc với giá tối thiểu lớn hơn giá tối đa'. 3. Áp dụng lọc.",
+        "Dữ liệu kiểm thử": "Giá/thương hiệu/thuộc tính theo test case",
+        "Kết quả mong đợi": "Danh sách chỉ hiển thị sản phẩm thỏa điều kiện lọc hoặc cảnh báo dữ liệu lọc sai."
+    },
+    {
+        "Use Case": "UC_06: Lọc SP",
+        "TC ID": "TC_06_05",
+        "Tên kịch bản kiểm thử": "Lọc với giá bằng 0",
+        "Mức độ ưu tiên": "Low",
+        "Các bước thực hiện": "1. Vào danh mục có bộ lọc. 2. Chọn điều kiện theo kịch bản 'Lọc với giá bằng 0'. 3. Áp dụng lọc.",
+        "Dữ liệu kiểm thử": "Giá/thương hiệu/thuộc tính theo test case",
+        "Kết quả mong đợi": "Danh sách chỉ hiển thị sản phẩm thỏa điều kiện lọc hoặc cảnh báo dữ liệu lọc sai."
+    },
+    {
+        "Use Case": "UC_06: Lọc SP",
+        "TC ID": "TC_06_06",
+        "Tên kịch bản kiểm thử": "Lọc với giá âm",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Vào danh mục có bộ lọc. 2. Chọn điều kiện theo kịch bản 'Lọc với giá âm'. 3. Áp dụng lọc.",
+        "Dữ liệu kiểm thử": "Giá/thương hiệu/thuộc tính theo test case",
+        "Kết quả mong đợi": "Danh sách chỉ hiển thị sản phẩm thỏa điều kiện lọc hoặc cảnh báo dữ liệu lọc sai."
+    },
+    {
+        "Use Case": "UC_06: Lọc SP",
+        "TC ID": "TC_06_07",
+        "Tên kịch bản kiểm thử": "Lọc với giá chứa ký tự không phải số",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Vào danh mục có bộ lọc. 2. Chọn điều kiện theo kịch bản 'Lọc với giá chứa ký tự không phải số'. 3. Áp dụng lọc.",
+        "Dữ liệu kiểm thử": "Giá/thương hiệu/thuộc tính theo test case",
+        "Kết quả mong đợi": "Danh sách chỉ hiển thị sản phẩm thỏa điều kiện lọc hoặc cảnh báo dữ liệu lọc sai."
+    },
+    {
+        "Use Case": "UC_06: Lọc SP",
+        "TC ID": "TC_06_08",
+        "Tên kịch bản kiểm thử": "Lọc theo thương hiệu không có sản phẩm",
+        "Mức độ ưu tiên": "Low",
+        "Các bước thực hiện": "1. Vào danh mục có bộ lọc. 2. Chọn điều kiện theo kịch bản 'Lọc theo thương hiệu không có sản phẩm'. 3. Áp dụng lọc.",
+        "Dữ liệu kiểm thử": "Giá/thương hiệu/thuộc tính theo test case",
+        "Kết quả mong đợi": "Danh sách chỉ hiển thị sản phẩm thỏa điều kiện lọc hoặc cảnh báo dữ liệu lọc sai."
+    },
+    {
+        "Use Case": "UC_06: Lọc SP",
+        "TC ID": "TC_06_09",
+        "Tên kịch bản kiểm thử": "Xóa bộ lọc và kiểm tra danh sách trở về ban đầu",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Vào danh mục có bộ lọc. 2. Chọn điều kiện theo kịch bản 'Xóa bộ lọc và kiểm tra danh sách trở về ban đầu'. 3. Áp dụng lọc.",
+        "Dữ liệu kiểm thử": "Giá/thương hiệu/thuộc tính theo test case",
+        "Kết quả mong đợi": "Danh sách chỉ hiển thị sản phẩm thỏa điều kiện lọc hoặc cảnh báo dữ liệu lọc sai."
+    },
+    {
+        "Use Case": "UC_06: Lọc SP",
+        "TC ID": "TC_06_10",
+        "Tên kịch bản kiểm thử": "Lọc rồi chuyển trang và kiểm tra bộ lọc còn hiệu lực",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Vào danh mục có bộ lọc. 2. Chọn điều kiện theo kịch bản 'Lọc rồi chuyển trang và kiểm tra bộ lọc còn hiệu lực'. 3. Áp dụng lọc.",
+        "Dữ liệu kiểm thử": "Giá/thương hiệu/thuộc tính theo test case",
+        "Kết quả mong đợi": "Danh sách chỉ hiển thị sản phẩm thỏa điều kiện lọc hoặc cảnh báo dữ liệu lọc sai."
+    },
+    {
+        "Use Case": "UC_07: Chi tiết SP",
+        "TC ID": "TC_07_01",
+        "Tên kịch bản kiểm thử": "Hiển thị đúng giá, mô tả và kho ảnh sản phẩm",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Kích xem MacBook Pro.",
+        "Dữ liệu kiểm thử": "SP: MacBook Pro",
+        "Kết quả mong đợi": "Hiện đủ: Ảnh, Giá, Tab Specs, Tab Reviews."
+    },
+    {
+        "Use Case": "UC_07: Chi tiết SP",
+        "TC ID": "TC_07_02",
+        "Tên kịch bản kiểm thử": "Kiểm tra tính năng chọn Option bắt buộc",
+        "Mức độ ưu tiên": "High",
+        "Các bước thực hiện": "1. Không chọn Size. 2. Nhấn Add to Cart.",
+        "Dữ liệu kiểm thử": "Option: [None]",
+        "Kết quả mong đợi": "Cảnh báo lỗi màu đỏ tại mục Size yêu cầu chọn."
+    },
+    {
+        "Use Case": "UC_07: Chi tiết SP",
+        "TC ID": "TC_07_03",
+        "Tên kịch bản kiểm thử": "Hiển thị trạng thái \"Hết hàng\"",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Chọn SP có Qty=0.",
+        "Dữ liệu kiểm thử": "Stock: 0",
+        "Kết quả mong đợi": "Hiển thị nhãn trạng thái 'Out of Stock'."
+    },
+    {
+        "Use Case": "UC_07: Chi tiết SP",
+        "TC ID": "TC_07_04",
+        "Tên kịch bản kiểm thử": "Kiểm tra breadcrumb và tiêu đề trên trang chi tiết sản phẩm",
+        "Mức độ ưu tiên": "Low",
+        "Các bước thực hiện": "1. Mở trang chi tiết sản phẩm. 2. Kiểm tra hoặc thao tác theo kịch bản 'Kiểm tra breadcrumb và tiêu đề trên trang chi tiết sản phẩm'.",
+        "Dữ liệu kiểm thử": "Sản phẩm/option/số lượng theo test case",
+        "Kết quả mong đợi": "Thông tin sản phẩm hiển thị đúng hoặc cảnh báo validate đúng."
+    },
+    {
+        "Use Case": "UC_07: Chi tiết SP",
+        "TC ID": "TC_07_05",
+        "Tên kịch bản kiểm thử": "Kiểm tra phóng to ảnh sản phẩm trong gallery",
+        "Mức độ ưu tiên": "Low",
+        "Các bước thực hiện": "1. Mở trang chi tiết sản phẩm. 2. Kiểm tra hoặc thao tác theo kịch bản 'Kiểm tra phóng to ảnh sản phẩm trong gallery'.",
+        "Dữ liệu kiểm thử": "Sản phẩm/option/số lượng theo test case",
+        "Kết quả mong đợi": "Thông tin sản phẩm hiển thị đúng hoặc cảnh báo validate đúng."
+    },
+    {
+        "Use Case": "UC_07: Chi tiết SP",
+        "TC ID": "TC_07_06",
+        "Tên kịch bản kiểm thử": "Kiểm tra hiển thị giá khuyến mãi và giá gốc",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Mở trang chi tiết sản phẩm. 2. Kiểm tra hoặc thao tác theo kịch bản 'Kiểm tra hiển thị giá khuyến mãi và giá gốc'.",
+        "Dữ liệu kiểm thử": "Sản phẩm/option/số lượng theo test case",
+        "Kết quả mong đợi": "Thông tin sản phẩm hiển thị đúng hoặc cảnh báo validate đúng."
+    },
+    {
+        "Use Case": "UC_07: Chi tiết SP",
+        "TC ID": "TC_07_07",
+        "Tên kịch bản kiểm thử": "Kiểm tra hiển thị điểm thưởng reward points",
+        "Mức độ ưu tiên": "Low",
+        "Các bước thực hiện": "1. Mở trang chi tiết sản phẩm. 2. Kiểm tra hoặc thao tác theo kịch bản 'Kiểm tra hiển thị điểm thưởng reward points'.",
+        "Dữ liệu kiểm thử": "Sản phẩm/option/số lượng theo test case",
+        "Kết quả mong đợi": "Thông tin sản phẩm hiển thị đúng hoặc cảnh báo validate đúng."
+    },
+    {
+        "Use Case": "UC_07: Chi tiết SP",
+        "TC ID": "TC_07_08",
+        "Tên kịch bản kiểm thử": "Kiểm tra hiển thị sản phẩm liên quan",
+        "Mức độ ưu tiên": "Low",
+        "Các bước thực hiện": "1. Mở trang chi tiết sản phẩm. 2. Kiểm tra hoặc thao tác theo kịch bản 'Kiểm tra hiển thị sản phẩm liên quan'.",
+        "Dữ liệu kiểm thử": "Sản phẩm/option/số lượng theo test case",
+        "Kết quả mong đợi": "Thông tin sản phẩm hiển thị đúng hoặc cảnh báo validate đúng."
+    },
+    {
+        "Use Case": "UC_07: Chi tiết SP",
+        "TC ID": "TC_07_09",
+        "Tên kịch bản kiểm thử": "Kiểm tra tab review và form gửi đánh giá",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Mở trang chi tiết sản phẩm. 2. Kiểm tra hoặc thao tác theo kịch bản 'Kiểm tra tab review và form gửi đánh giá'.",
+        "Dữ liệu kiểm thử": "Sản phẩm/option/số lượng theo test case",
+        "Kết quả mong đợi": "Thông tin sản phẩm hiển thị đúng hoặc cảnh báo validate đúng."
+    },
+    {
+        "Use Case": "UC_07: Chi tiết SP",
+        "TC ID": "TC_07_10",
+        "Tên kịch bản kiểm thử": "Kiểm tra validate số lượng mua trên trang chi tiết",
+        "Mức độ ưu tiên": "High",
+        "Các bước thực hiện": "1. Mở trang chi tiết sản phẩm. 2. Kiểm tra hoặc thao tác theo kịch bản 'Kiểm tra validate số lượng mua trên trang chi tiết'.",
+        "Dữ liệu kiểm thử": "Sản phẩm/option/số lượng theo test case",
+        "Kết quả mong đợi": "Thông tin sản phẩm hiển thị đúng hoặc cảnh báo validate đúng."
+    },
+    {
+        "Use Case": "UC_08: Thêm vào giỏ",
+        "TC ID": "TC_08_01",
+        "Tên kịch bản kiểm thử": "Thêm sản phẩm thành công từ trang danh mục",
+        "Mức độ ưu tiên": "High",
+        "Các bước thực hiện": "1. Nhấn Add to Cart.",
+        "Dữ liệu kiểm thử": "Qty: 1",
+        "Kết quả mong đợi": "Báo Success. Header cập nhật số lượng items."
+    },
+    {
+        "Use Case": "UC_08: Thêm vào giỏ",
+        "TC ID": "TC_08_02",
+        "Tên kịch bản kiểm thử": "Thêm sản phẩm kèm các Option",
+        "Mức độ ưu tiên": "High",
+        "Các bước thực hiện": "1. Chọn Color: Blue. 2. Nhấn Add.",
+        "Dữ liệu kiểm thử": "Color: Blue",
+        "Kết quả mong đợi": "Giỏ hàng hiển thị đúng SP kèm thuộc tính màu Blue."
+    },
+    {
+        "Use Case": "UC_08: Thêm vào giỏ",
+        "TC ID": "TC_08_03",
+        "Tên kịch bản kiểm thử": "Thêm sản phẩm vượt quá số lượng tồn kho",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Kho còn 2. 2. Nhập 10. 3. Add.",
+        "Dữ liệu kiểm thử": "Qty: 10, Stock: 2",
+        "Kết quả mong đợi": "Cảnh báo không đủ số lượng mong muốn."
+    },
+    {
+        "Use Case": "UC_08: Thêm vào giỏ",
+        "TC ID": "TC_08_04",
+        "Tên kịch bản kiểm thử": "Thêm sản phẩm với số lượng bằng 0",
+        "Mức độ ưu tiên": "Low",
+        "Các bước thực hiện": "1. Nhập Qty=0. 2. Nhấn Add.",
+        "Dữ liệu kiểm thử": "Qty: 0",
+        "Kết quả mong đợi": "Không thực hiện thêm hoặc báo lỗi số lượng."
+    },
+    {
+        "Use Case": "UC_08: Thêm vào giỏ",
+        "TC ID": "TC_08_05",
+        "Tên kịch bản kiểm thử": "Thêm sản phẩm chưa đăng nhập vào giỏ",
+        "Mức độ ưu tiên": "High",
+        "Các bước thực hiện": "1. Search SP. 2. Nhấn Add ngay tại trang kết quả.",
+        "Dữ liệu kiểm thử": "Product: iMac",
+        "Kết quả mong đợi": "SP được đưa vào giỏ mà không cần vào trang chi tiết."
+    },
+    {
+        "Use Case": "UC_08: Thêm vào giỏ",
+        "TC ID": "TC_08_06",
+        "Tên kịch bản kiểm thử": "Thêm cùng một sản phẩm nhiều lần và kiểm tra cộng dồn số lượng",
+        "Mức độ ưu tiên": "High",
+        "Các bước thực hiện": "1. Mở trang chứa sản phẩm. 2. Chọn option/nhập số lượng theo kịch bản 'Thêm cùng một sản phẩm nhiều lần và kiểm tra cộng dồn số lượng'. 3. Add to Cart.",
+        "Dữ liệu kiểm thử": "Product/Qty/Option theo test case",
+        "Kết quả mong đợi": "Sản phẩm được thêm đúng vào giỏ hoặc bị chặn khi dữ liệu không hợp lệ."
+    },
+    {
+        "Use Case": "UC_08: Thêm vào giỏ",
+        "TC ID": "TC_08_07",
+        "Tên kịch bản kiểm thử": "Thêm sản phẩm có option bị bỏ trống",
+        "Mức độ ưu tiên": "High",
+        "Các bước thực hiện": "1. Mở trang chứa sản phẩm. 2. Chọn option/nhập số lượng theo kịch bản 'Thêm sản phẩm có option bị bỏ trống'. 3. Add to Cart.",
+        "Dữ liệu kiểm thử": "Product/Qty/Option theo test case",
+        "Kết quả mong đợi": "Sản phẩm được thêm đúng vào giỏ hoặc bị chặn khi dữ liệu không hợp lệ."
+    },
+    {
+        "Use Case": "UC_08: Thêm vào giỏ",
+        "TC ID": "TC_08_08",
+        "Tên kịch bản kiểm thử": "Thêm sản phẩm với số lượng là số thập phân",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Mở trang chứa sản phẩm. 2. Chọn option/nhập số lượng theo kịch bản 'Thêm sản phẩm với số lượng là số thập phân'. 3. Add to Cart.",
+        "Dữ liệu kiểm thử": "Product/Qty/Option theo test case",
+        "Kết quả mong đợi": "Sản phẩm được thêm đúng vào giỏ hoặc bị chặn khi dữ liệu không hợp lệ."
+    },
+    {
+        "Use Case": "UC_08: Thêm vào giỏ",
+        "TC ID": "TC_08_09",
+        "Tên kịch bản kiểm thử": "Thêm sản phẩm với số lượng âm",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Mở trang chứa sản phẩm. 2. Chọn option/nhập số lượng theo kịch bản 'Thêm sản phẩm với số lượng âm'. 3. Add to Cart.",
+        "Dữ liệu kiểm thử": "Product/Qty/Option theo test case",
+        "Kết quả mong đợi": "Sản phẩm được thêm đúng vào giỏ hoặc bị chặn khi dữ liệu không hợp lệ."
+    },
+    {
+        "Use Case": "UC_08: Thêm vào giỏ",
+        "TC ID": "TC_08_10",
+        "Tên kịch bản kiểm thử": "Thêm sản phẩm khi product status bị disable",
+        "Mức độ ưu tiên": "High",
+        "Các bước thực hiện": "1. Mở trang chứa sản phẩm. 2. Chọn option/nhập số lượng theo kịch bản 'Thêm sản phẩm khi product status bị disable'. 3. Add to Cart.",
+        "Dữ liệu kiểm thử": "Product/Qty/Option theo test case",
+        "Kết quả mong đợi": "Sản phẩm được thêm đúng vào giỏ hoặc bị chặn khi dữ liệu không hợp lệ."
+    },
+    {
+        "Use Case": "UC_09: Xóa khỏi giỏ",
+        "TC ID": "TC_09_01",
+        "Tên kịch bản kiểm thử": "Xóa sản phẩm và kiểm tra cập nhật tổng tiền giỏ hàng",
+        "Mức độ ưu tiên": "High",
+        "Các bước thực hiện": "1. Vào giỏ hàng. 2. Nhấn nút X đỏ.",
+        "Dữ liệu kiểm thử": "Action: Remove",
+        "Kết quả mong đợi": "SP biến mất. Tổng tiền giỏ hàng cập nhật ngay."
+    },
+    {
+        "Use Case": "UC_09: Xóa khỏi giỏ",
+        "TC ID": "TC_09_02",
+        "Tên kịch bản kiểm thử": "Xóa toàn bộ sản phẩm và hiển thị thông báo \"Giỏ hàng trống\"",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Xóa tất cả SP đang có.",
+        "Dữ liệu kiểm thử": "Action: Clear",
+        "Kết quả mong đợi": "Báo: \"Your shopping cart is empty!\"."
+    },
+    {
+        "Use Case": "UC_09: Xóa khỏi giỏ",
+        "TC ID": "TC_09_03",
+        "Tên kịch bản kiểm thử": "Xóa một sản phẩm trong giỏ có nhiều sản phẩm khác nhau",
+        "Mức độ ưu tiên": "High",
+        "Các bước thực hiện": "1. Kích Mini-cart trên Header. 2. Nhấn X.",
+        "Dữ liệu kiểm thử": "Action: Fast del",
+        "Kết quả mong đợi": "SP bị xóa, thông tin Header cập nhật ngay."
+    },
+    {
+        "Use Case": "UC_09: Xóa khỏi giỏ",
+        "TC ID": "TC_09_04",
+        "Tên kịch bản kiểm thử": "Xóa sản phẩm từ mini cart",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Vào Cart hoặc Mini-cart. 2. Chọn sản phẩm theo kịch bản 'Xóa sản phẩm từ mini cart'. 3. Remove.",
+        "Dữ liệu kiểm thử": "Cart item/cart_id theo test case",
+        "Kết quả mong đợi": "Sản phẩm bị xóa đúng, tổng tiền và header cart cập nhật."
+    },
+    {
+        "Use Case": "UC_09: Xóa khỏi giỏ",
+        "TC ID": "TC_09_05",
+        "Tên kịch bản kiểm thử": "Xóa sản phẩm rồi refresh trang giỏ hàng",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Vào Cart hoặc Mini-cart. 2. Chọn sản phẩm theo kịch bản 'Xóa sản phẩm rồi refresh trang giỏ hàng'. 3. Remove.",
+        "Dữ liệu kiểm thử": "Cart item/cart_id theo test case",
+        "Kết quả mong đợi": "Sản phẩm bị xóa đúng, tổng tiền và header cart cập nhật."
+    },
+    {
+        "Use Case": "UC_09: Xóa khỏi giỏ",
+        "TC ID": "TC_09_06",
+        "Tên kịch bản kiểm thử": "Xóa sản phẩm có option và kiểm tra đúng dòng bị xóa",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Vào Cart hoặc Mini-cart. 2. Chọn sản phẩm theo kịch bản 'Xóa sản phẩm có option và kiểm tra đúng dòng bị xóa'. 3. Remove.",
+        "Dữ liệu kiểm thử": "Cart item/cart_id theo test case",
+        "Kết quả mong đợi": "Sản phẩm bị xóa đúng, tổng tiền và header cart cập nhật."
+    },
+    {
+        "Use Case": "UC_09: Xóa khỏi giỏ",
+        "TC ID": "TC_09_07",
+        "Tên kịch bản kiểm thử": "Xóa sản phẩm sau khi áp dụng coupon",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Vào Cart hoặc Mini-cart. 2. Chọn sản phẩm theo kịch bản 'Xóa sản phẩm sau khi áp dụng coupon'. 3. Remove.",
+        "Dữ liệu kiểm thử": "Cart item/cart_id theo test case",
+        "Kết quả mong đợi": "Sản phẩm bị xóa đúng, tổng tiền và header cart cập nhật."
+    },
+    {
+        "Use Case": "UC_09: Xóa khỏi giỏ",
+        "TC ID": "TC_09_08",
+        "Tên kịch bản kiểm thử": "Xóa sản phẩm sau khi áp dụng voucher",
+        "Mức độ ưu tiên": "Low",
+        "Các bước thực hiện": "1. Vào Cart hoặc Mini-cart. 2. Chọn sản phẩm theo kịch bản 'Xóa sản phẩm sau khi áp dụng voucher'. 3. Remove.",
+        "Dữ liệu kiểm thử": "Cart item/cart_id theo test case",
+        "Kết quả mong đợi": "Sản phẩm bị xóa đúng, tổng tiền và header cart cập nhật."
+    },
+    {
+        "Use Case": "UC_09: Xóa khỏi giỏ",
+        "TC ID": "TC_09_09",
+        "Tên kịch bản kiểm thử": "Xóa sản phẩm rồi quay lại checkout",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Vào Cart hoặc Mini-cart. 2. Chọn sản phẩm theo kịch bản 'Xóa sản phẩm rồi quay lại checkout'. 3. Remove.",
+        "Dữ liệu kiểm thử": "Cart item/cart_id theo test case",
+        "Kết quả mong đợi": "Sản phẩm bị xóa đúng, tổng tiền và header cart cập nhật."
+    },
+    {
+        "Use Case": "UC_09: Xóa khỏi giỏ",
+        "TC ID": "TC_09_10",
+        "Tên kịch bản kiểm thử": "Xóa sản phẩm hết hàng khỏi giỏ",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Vào Cart hoặc Mini-cart. 2. Chọn sản phẩm theo kịch bản 'Xóa sản phẩm hết hàng khỏi giỏ'. 3. Remove.",
+        "Dữ liệu kiểm thử": "Cart item/cart_id theo test case",
+        "Kết quả mong đợi": "Sản phẩm bị xóa đúng, tổng tiền và header cart cập nhật."
+    },
+    {
+        "Use Case": "UC_10: Cập nhật giỏ",
+        "TC ID": "TC_10_01",
+        "Tên kịch bản kiểm thử": "Tăng/Giảm số lượng sản phẩm trong giỏ hàng",
+        "Mức độ ưu tiên": "High",
+        "Các bước thực hiện": "1. Sửa Qty 1 -> 3. 2. Nhấn Update.",
+        "Dữ liệu kiểm thử": "Qty: 3",
+        "Kết quả mong đợi": "Cập nhật thành công. Tổng tiền nhân theo Qty mới."
+    },
+    {
+        "Use Case": "UC_10: Cập nhật giỏ",
+        "TC ID": "TC_10_02",
+        "Tên kịch bản kiểm thử": "Cập nhật số lượng về 0",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Nhập Qty=0. 2. Nhấn Update.",
+        "Dữ liệu kiểm thử": "Qty: 0",
+        "Kết quả mong đợi": "Hệ thống tự động hiểu là thao tác Xóa SP."
+    },
+    {
+        "Use Case": "UC_10: Cập nhật giỏ",
+        "TC ID": "TC_10_03",
+        "Tên kịch bản kiểm thử": "Nhập ký tự không phải số vào ô số lượng",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Nhập 'abc' vào ô Qty. 2. Nhấn Update.",
+        "Dữ liệu kiểm thử": "Data: 'abc'",
+        "Kết quả mong đợi": "Báo lỗi dữ liệu hoặc giữ nguyên giá trị cũ."
+    },
+    {
+        "Use Case": "UC_10: Cập nhật giỏ",
+        "TC ID": "TC_10_04",
+        "Tên kịch bản kiểm thử": "Cập nhật số lượng vượt tồn kho từ trang giỏ",
+        "Mức độ ưu tiên": "High",
+        "Các bước thực hiện": "1. Vào Shopping Cart. 2. Sửa Quantity theo kịch bản 'Cập nhật số lượng vượt tồn kho từ trang giỏ'. 3. Update.",
+        "Dữ liệu kiểm thử": "Quantity theo test case",
+        "Kết quả mong đợi": "Giỏ hàng cập nhật đúng hoặc cảnh báo dữ liệu số lượng không hợp lệ."
+    },
+    {
+        "Use Case": "UC_10: Cập nhật giỏ",
+        "TC ID": "TC_10_05",
+        "Tên kịch bản kiểm thử": "Cập nhật số lượng là số âm",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Vào Shopping Cart. 2. Sửa Quantity theo kịch bản 'Cập nhật số lượng là số âm'. 3. Update.",
+        "Dữ liệu kiểm thử": "Quantity theo test case",
+        "Kết quả mong đợi": "Giỏ hàng cập nhật đúng hoặc cảnh báo dữ liệu số lượng không hợp lệ."
+    },
+    {
+        "Use Case": "UC_10: Cập nhật giỏ",
+        "TC ID": "TC_10_06",
+        "Tên kịch bản kiểm thử": "Cập nhật số lượng là số thập phân",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Vào Shopping Cart. 2. Sửa Quantity theo kịch bản 'Cập nhật số lượng là số thập phân'. 3. Update.",
+        "Dữ liệu kiểm thử": "Quantity theo test case",
+        "Kết quả mong đợi": "Giỏ hàng cập nhật đúng hoặc cảnh báo dữ liệu số lượng không hợp lệ."
+    },
+    {
+        "Use Case": "UC_10: Cập nhật giỏ",
+        "TC ID": "TC_10_07",
+        "Tên kịch bản kiểm thử": "Cập nhật nhiều dòng sản phẩm cùng lúc",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Vào Shopping Cart. 2. Sửa Quantity theo kịch bản 'Cập nhật nhiều dòng sản phẩm cùng lúc'. 3. Update.",
+        "Dữ liệu kiểm thử": "Quantity theo test case",
+        "Kết quả mong đợi": "Giỏ hàng cập nhật đúng hoặc cảnh báo dữ liệu số lượng không hợp lệ."
+    },
+    {
+        "Use Case": "UC_10: Cập nhật giỏ",
+        "TC ID": "TC_10_08",
+        "Tên kịch bản kiểm thử": "Cập nhật giỏ sau khi sản phẩm bị admin disable",
+        "Mức độ ưu tiên": "High",
+        "Các bước thực hiện": "1. Vào Shopping Cart. 2. Sửa Quantity theo kịch bản 'Cập nhật giỏ sau khi sản phẩm bị admin disable'. 3. Update.",
+        "Dữ liệu kiểm thử": "Quantity theo test case",
+        "Kết quả mong đợi": "Giỏ hàng cập nhật đúng hoặc cảnh báo dữ liệu số lượng không hợp lệ."
+    },
+    {
+        "Use Case": "UC_10: Cập nhật giỏ",
+        "TC ID": "TC_10_09",
+        "Tên kịch bản kiểm thử": "Cập nhật giỏ sau khi giá sản phẩm thay đổi",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Vào Shopping Cart. 2. Sửa Quantity theo kịch bản 'Cập nhật giỏ sau khi giá sản phẩm thay đổi'. 3. Update.",
+        "Dữ liệu kiểm thử": "Quantity theo test case",
+        "Kết quả mong đợi": "Giỏ hàng cập nhật đúng hoặc cảnh báo dữ liệu số lượng không hợp lệ."
+    },
+    {
+        "Use Case": "UC_10: Cập nhật giỏ",
+        "TC ID": "TC_10_10",
+        "Tên kịch bản kiểm thử": "Cập nhật giỏ sau khi option sản phẩm bị thay đổi",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Vào Shopping Cart. 2. Sửa Quantity theo kịch bản 'Cập nhật giỏ sau khi option sản phẩm bị thay đổi'. 3. Update.",
+        "Dữ liệu kiểm thử": "Quantity theo test case",
+        "Kết quả mong đợi": "Giỏ hàng cập nhật đúng hoặc cảnh báo dữ liệu số lượng không hợp lệ."
+    },
+    {
+        "Use Case": "UC_11: TT giao hàng",
+        "TC ID": "TC_11_01",
+        "Tên kịch bản kiểm thử": "Nhập địa chỉ giao hàng mới tại bước Checkout",
+        "Mức độ ưu tiên": "High",
+        "Các bước thực hiện": "1. Chọn New Address. 2. Nhập TT. 3. Continue.",
+        "Dữ liệu kiểm thử": "New Address Data",
+        "Kết quả mong đợi": "Lưu thành công để dùng tính phí VC."
+    },
+    {
+        "Use Case": "UC_11: TT giao hàng",
+        "TC ID": "TC_11_02",
+        "Tên kịch bản kiểm thử": "Chọn địa chỉ đã lưu trong danh sách có sẵn",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Chọn Existing Address. 2. Continue.",
+        "Dữ liệu kiểm thử": "Old Data",
+        "Kết quả mong đợi": "Hệ thống tự load thông tin khách đã lưu."
+    },
+    {
+        "Use Case": "UC_11: TT giao hàng",
+        "TC ID": "TC_11_03",
+        "Tên kịch bản kiểm thử": "Kiểm tra validate các trường Postcode, City, Country",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Nhập Postcode sai định dạng. 2. Continue.",
+        "Dữ liệu kiểm thử": "Postcode: xyz",
+        "Kết quả mong đợi": "Cảnh báo yêu cầu nhập đúng định dạng vùng."
+    },
+    {
+        "Use Case": "UC_11: TT giao hàng",
+        "TC ID": "TC_11_04",
+        "Tên kịch bản kiểm thử": "Nhập địa chỉ giao hàng với trường First Name bỏ trống",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Vào Checkout. 2. Chọn/nhập địa chỉ giao hàng theo kịch bản 'Nhập địa chỉ giao hàng với trường First Name bỏ trống'. 3. Continue.",
+        "Dữ liệu kiểm thử": "Address/Postcode/City/Country theo test case",
+        "Kết quả mong đợi": "Địa chỉ hợp lệ được dùng cho checkout; dữ liệu sai bị validate."
+    },
+    {
+        "Use Case": "UC_11: TT giao hàng",
+        "TC ID": "TC_11_05",
+        "Tên kịch bản kiểm thử": "Nhập địa chỉ giao hàng với trường Address 1 bỏ trống",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Vào Checkout. 2. Chọn/nhập địa chỉ giao hàng theo kịch bản 'Nhập địa chỉ giao hàng với trường Address 1 bỏ trống'. 3. Continue.",
+        "Dữ liệu kiểm thử": "Address/Postcode/City/Country theo test case",
+        "Kết quả mong đợi": "Địa chỉ hợp lệ được dùng cho checkout; dữ liệu sai bị validate."
+    },
+    {
+        "Use Case": "UC_11: TT giao hàng",
+        "TC ID": "TC_11_06",
+        "Tên kịch bản kiểm thử": "Nhập postcode có độ dài vượt giới hạn",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Vào Checkout. 2. Chọn/nhập địa chỉ giao hàng theo kịch bản 'Nhập postcode có độ dài vượt giới hạn'. 3. Continue.",
+        "Dữ liệu kiểm thử": "Address/Postcode/City/Country theo test case",
+        "Kết quả mong đợi": "Địa chỉ hợp lệ được dùng cho checkout; dữ liệu sai bị validate."
+    },
+    {
+        "Use Case": "UC_11: TT giao hàng",
+        "TC ID": "TC_11_07",
+        "Tên kịch bản kiểm thử": "Chọn quốc gia rồi kiểm tra danh sách zone/state cập nhật",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Vào Checkout. 2. Chọn/nhập địa chỉ giao hàng theo kịch bản 'Chọn quốc gia rồi kiểm tra danh sách zone/state cập nhật'. 3. Continue.",
+        "Dữ liệu kiểm thử": "Address/Postcode/City/Country theo test case",
+        "Kết quả mong đợi": "Địa chỉ hợp lệ được dùng cho checkout; dữ liệu sai bị validate."
+    },
+    {
+        "Use Case": "UC_11: TT giao hàng",
+        "TC ID": "TC_11_08",
+        "Tên kịch bản kiểm thử": "Lưu địa chỉ mới vào sổ địa chỉ trong checkout",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Vào Checkout. 2. Chọn/nhập địa chỉ giao hàng theo kịch bản 'Lưu địa chỉ mới vào sổ địa chỉ trong checkout'. 3. Continue.",
+        "Dữ liệu kiểm thử": "Address/Postcode/City/Country theo test case",
+        "Kết quả mong đợi": "Địa chỉ hợp lệ được dùng cho checkout; dữ liệu sai bị validate."
+    },
+    {
+        "Use Case": "UC_11: TT giao hàng",
+        "TC ID": "TC_11_09",
+        "Tên kịch bản kiểm thử": "Chỉnh sửa địa chỉ đã lưu và dùng lại trong checkout",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Vào Checkout. 2. Chọn/nhập địa chỉ giao hàng theo kịch bản 'Chỉnh sửa địa chỉ đã lưu và dùng lại trong checkout'. 3. Continue.",
+        "Dữ liệu kiểm thử": "Address/Postcode/City/Country theo test case",
+        "Kết quả mong đợi": "Địa chỉ hợp lệ được dùng cho checkout; dữ liệu sai bị validate."
+    },
+    {
+        "Use Case": "UC_11: TT giao hàng",
+        "TC ID": "TC_11_10",
+        "Tên kịch bản kiểm thử": "Xóa địa chỉ đang được chọn làm địa chỉ giao hàng",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Vào Checkout. 2. Chọn/nhập địa chỉ giao hàng theo kịch bản 'Xóa địa chỉ đang được chọn làm địa chỉ giao hàng'. 3. Continue.",
+        "Dữ liệu kiểm thử": "Address/Postcode/City/Country theo test case",
+        "Kết quả mong đợi": "Địa chỉ hợp lệ được dùng cho checkout; dữ liệu sai bị validate."
+    },
+    {
+        "Use Case": "UC_12: PT vận chuyển",
+        "TC ID": "TC_12_01",
+        "Tên kịch bản kiểm thử": "Hiển thị và áp dụng đúng phí vận chuyển",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Chọn Flat Rate. 2. Continue.",
+        "Dữ liệu kiểm thử": "Rate: 5$",
+        "Kết quả mong đợi": "Phí 5.00$ được cộng vào tổng đơn hàng."
+    },
+    {
+        "Use Case": "UC_12: PT vận chuyển",
+        "TC ID": "TC_12_02",
+        "Tên kịch bản kiểm thử": "Kiểm tra điều kiện \"Free Shipping\" theo giá trị đơn hàng",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Đơn đạt 100$. 2. Tích Free Shipping.",
+        "Dữ liệu kiểm thử": "Total > 100$",
+        "Kết quả mong đợi": "Phí vận chuyển được tính là 0.00$."
+    },
+    {
+        "Use Case": "UC_12: PT vận chuyển",
+        "TC ID": "TC_12_03",
+        "Tên kịch bản kiểm thử": "Không hiển thị phương thức vận chuyển khi địa chỉ ngoài vùng hỗ trợ",
+        "Mức độ ưu tiên": "High",
+        "Các bước thực hiện": "1. Nhập 'Giao giờ hành chính'. 2. Continue.",
+        "Dữ liệu kiểm thử": "Comment: 'HC'",
+        "Kết quả mong đợi": "Ghi chú xuất hiện trong chi tiết đơn hàng Admin."
+    },
+    {
+        "Use Case": "UC_12: PT vận chuyển",
+        "TC ID": "TC_12_04",
+        "Tên kịch bản kiểm thử": "Thay đổi địa chỉ giao hàng và kiểm tra phí vận chuyển cập nhật",
+        "Mức độ ưu tiên": "High",
+        "Các bước thực hiện": "1. Tại Checkout, mở Shipping Method. 2. Chọn/thay đổi điều kiện theo kịch bản 'Thay đổi địa chỉ giao hàng và kiểm tra phí vận chuyển cập nhật'. 3. Continue.",
+        "Dữ liệu kiểm thử": "Shipping method, total, address hoặc weight theo test case",
+        "Kết quả mong đợi": "Phí vận chuyển hiển thị và cộng tổng đơn đúng; trường hợp không hợp lệ bị chặn."
+    },
+    {
+        "Use Case": "UC_12: PT vận chuyển",
+        "TC ID": "TC_12_05",
+        "Tên kịch bản kiểm thử": "Kiểm tra flat rate shipping tính đúng",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Tại Checkout, mở Shipping Method. 2. Chọn/thay đổi điều kiện theo kịch bản 'Kiểm tra flat rate shipping tính đúng'. 3. Continue.",
+        "Dữ liệu kiểm thử": "Shipping method, total, address hoặc weight theo test case",
+        "Kết quả mong đợi": "Phí vận chuyển hiển thị và cộng tổng đơn đúng; trường hợp không hợp lệ bị chặn."
+    },
+    {
+        "Use Case": "UC_12: PT vận chuyển",
+        "TC ID": "TC_12_06",
+        "Tên kịch bản kiểm thử": "Kiểm tra weight based shipping theo trọng lượng giỏ hàng",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Tại Checkout, mở Shipping Method. 2. Chọn/thay đổi điều kiện theo kịch bản 'Kiểm tra weight based shipping theo trọng lượng giỏ hàng'. 3. Continue.",
+        "Dữ liệu kiểm thử": "Shipping method, total, address hoặc weight theo test case",
+        "Kết quả mong đợi": "Phí vận chuyển hiển thị và cộng tổng đơn đúng; trường hợp không hợp lệ bị chặn."
+    },
+    {
+        "Use Case": "UC_12: PT vận chuyển",
+        "TC ID": "TC_12_07",
+        "Tên kịch bản kiểm thử": "Kiểm tra pickup from store nếu được bật",
+        "Mức độ ưu tiên": "Low",
+        "Các bước thực hiện": "1. Tại Checkout, mở Shipping Method. 2. Chọn/thay đổi điều kiện theo kịch bản 'Kiểm tra pickup from store nếu được bật'. 3. Continue.",
+        "Dữ liệu kiểm thử": "Shipping method, total, address hoặc weight theo test case",
+        "Kết quả mong đợi": "Phí vận chuyển hiển thị và cộng tổng đơn đúng; trường hợp không hợp lệ bị chặn."
+    },
+    {
+        "Use Case": "UC_12: PT vận chuyển",
+        "TC ID": "TC_12_08",
+        "Tên kịch bản kiểm thử": "Bỏ chọn phương thức vận chuyển và kiểm tra không thể tiếp tục",
+        "Mức độ ưu tiên": "High",
+        "Các bước thực hiện": "1. Tại Checkout, mở Shipping Method. 2. Chọn/thay đổi điều kiện theo kịch bản 'Bỏ chọn phương thức vận chuyển và kiểm tra không thể tiếp tục'. 3. Continue.",
+        "Dữ liệu kiểm thử": "Shipping method, total, address hoặc weight theo test case",
+        "Kết quả mong đợi": "Phí vận chuyển hiển thị và cộng tổng đơn đúng; trường hợp không hợp lệ bị chặn."
+    },
+    {
+        "Use Case": "UC_12: PT vận chuyển",
+        "TC ID": "TC_12_09",
+        "Tên kịch bản kiểm thử": "Kiểm tra phí vận chuyển hiển thị đúng tiền tệ đang chọn",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Tại Checkout, mở Shipping Method. 2. Chọn/thay đổi điều kiện theo kịch bản 'Kiểm tra phí vận chuyển hiển thị đúng tiền tệ đang chọn'. 3. Continue.",
+        "Dữ liệu kiểm thử": "Shipping method, total, address hoặc weight theo test case",
+        "Kết quả mong đợi": "Phí vận chuyển hiển thị và cộng tổng đơn đúng; trường hợp không hợp lệ bị chặn."
+    },
+    {
+        "Use Case": "UC_12: PT vận chuyển",
+        "TC ID": "TC_12_10",
+        "Tên kịch bản kiểm thử": "Kiểm tra phương thức vận chuyển bị disable trong admin không hiển thị",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Tại Checkout, mở Shipping Method. 2. Chọn/thay đổi điều kiện theo kịch bản 'Kiểm tra phương thức vận chuyển bị disable trong admin không hiển thị'. 3. Continue.",
+        "Dữ liệu kiểm thử": "Shipping method, total, address hoặc weight theo test case",
+        "Kết quả mong đợi": "Phí vận chuyển hiển thị và cộng tổng đơn đúng; trường hợp không hợp lệ bị chặn."
+    },
+    {
+        "Use Case": "UC_13: PT thanh toán",
+        "TC ID": "TC_13_01",
+        "Tên kịch bản kiểm thử": "Chọn thanh toán khi nhận hàng",
+        "Mức độ ưu tiên": "High",
+        "Các bước thực hiện": "1. Tích COD. 2. Tích Agree. 3. Continue.",
+        "Dữ liệu kiểm thử": "Method: COD",
+        "Kết quả mong đợi": "Ghi nhận phương thức trả tiền khi nhận hàng."
+    },
+    {
+        "Use Case": "UC_13: PT thanh toán",
+        "TC ID": "TC_13_02",
+        "Tên kịch bản kiểm thử": "Chọn thanh toán qua chuyển khoản ngân hàng",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Tích Bank Transfer. 2. Continue.",
+        "Dữ liệu kiểm thử": "Method: Bank",
+        "Kết quả mong đợi": "Hiện thông tin STK ngân hàng của Store."
+    },
+    {
+        "Use Case": "UC_13: PT thanh toán",
+        "TC ID": "TC_13_03",
+        "Tên kịch bản kiểm thử": "Kiểm tra bắt buộc đồng ý \"Terms & Conditions\"",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Chọn COD. 2. Không tích Agree. 3. Continue.",
+        "Dữ liệu kiểm thử": "Agree: No",
+        "Kết quả mong đợi": "Cảnh báo: \"You must agree to the Terms & Conditions!\"."
+    },
+    {
+        "Use Case": "UC_13: PT thanh toán",
+        "TC ID": "TC_13_04",
+        "Tên kịch bản kiểm thử": "Không hiển thị phương thức thanh toán khi địa chỉ không hợp lệ",
+        "Mức độ ưu tiên": "High",
+        "Các bước thực hiện": "1. Tại Checkout, mở Payment Method. 2. Chọn phương thức theo kịch bản 'Không hiển thị phương thức thanh toán khi địa chỉ không hợp lệ'. 3. Continue.",
+        "Dữ liệu kiểm thử": "Payment method/Terms/Billing theo test case",
+        "Kết quả mong đợi": "Phương thức thanh toán được ghi nhận đúng hoặc hiển thị cảnh báo bắt buộc."
+    },
+    {
+        "Use Case": "UC_13: PT thanh toán",
+        "TC ID": "TC_13_05",
+        "Tên kịch bản kiểm thử": "Chọn phương thức thanh toán rồi thay đổi địa chỉ billing",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Tại Checkout, mở Payment Method. 2. Chọn phương thức theo kịch bản 'Chọn phương thức thanh toán rồi thay đổi địa chỉ billing'. 3. Continue.",
+        "Dữ liệu kiểm thử": "Payment method/Terms/Billing theo test case",
+        "Kết quả mong đợi": "Phương thức thanh toán được ghi nhận đúng hoặc hiển thị cảnh báo bắt buộc."
+    },
+    {
+        "Use Case": "UC_13: PT thanh toán",
+        "TC ID": "TC_13_06",
+        "Tên kịch bản kiểm thử": "Kiểm tra bank transfer hiển thị hướng dẫn thanh toán",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Tại Checkout, mở Payment Method. 2. Chọn phương thức theo kịch bản 'Kiểm tra bank transfer hiển thị hướng dẫn thanh toán'. 3. Continue.",
+        "Dữ liệu kiểm thử": "Payment method/Terms/Billing theo test case",
+        "Kết quả mong đợi": "Phương thức thanh toán được ghi nhận đúng hoặc hiển thị cảnh báo bắt buộc."
+    },
+    {
+        "Use Case": "UC_13: PT thanh toán",
+        "TC ID": "TC_13_07",
+        "Tên kịch bản kiểm thử": "Kiểm tra COD chỉ hiển thị khi thỏa điều kiện geo zone",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Tại Checkout, mở Payment Method. 2. Chọn phương thức theo kịch bản 'Kiểm tra COD chỉ hiển thị khi thỏa điều kiện geo zone'. 3. Continue.",
+        "Dữ liệu kiểm thử": "Payment method/Terms/Billing theo test case",
+        "Kết quả mong đợi": "Phương thức thanh toán được ghi nhận đúng hoặc hiển thị cảnh báo bắt buộc."
+    },
+    {
+        "Use Case": "UC_13: PT thanh toán",
+        "TC ID": "TC_13_08",
+        "Tên kịch bản kiểm thử": "Bỏ chọn phương thức thanh toán và kiểm tra không thể xác nhận đơn",
+        "Mức độ ưu tiên": "High",
+        "Các bước thực hiện": "1. Tại Checkout, mở Payment Method. 2. Chọn phương thức theo kịch bản 'Bỏ chọn phương thức thanh toán và kiểm tra không thể xác nhận đơn'. 3. Continue.",
+        "Dữ liệu kiểm thử": "Payment method/Terms/Billing theo test case",
+        "Kết quả mong đợi": "Phương thức thanh toán được ghi nhận đúng hoặc hiển thị cảnh báo bắt buộc."
+    },
+    {
+        "Use Case": "UC_13: PT thanh toán",
+        "TC ID": "TC_13_09",
+        "Tên kịch bản kiểm thử": "Kiểm tra payment method bị disable trong admin không hiển thị",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Tại Checkout, mở Payment Method. 2. Chọn phương thức theo kịch bản 'Kiểm tra payment method bị disable trong admin không hiển thị'. 3. Continue.",
+        "Dữ liệu kiểm thử": "Payment method/Terms/Billing theo test case",
+        "Kết quả mong đợi": "Phương thức thanh toán được ghi nhận đúng hoặc hiển thị cảnh báo bắt buộc."
+    },
+    {
+        "Use Case": "UC_13: PT thanh toán",
+        "TC ID": "TC_13_10",
+        "Tên kịch bản kiểm thử": "Kiểm tra tổng đơn hàng không đổi sai khi đổi phương thức thanh toán",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Tại Checkout, mở Payment Method. 2. Chọn phương thức theo kịch bản 'Kiểm tra tổng đơn hàng không đổi sai khi đổi phương thức thanh toán'. 3. Continue.",
+        "Dữ liệu kiểm thử": "Payment method/Terms/Billing theo test case",
+        "Kết quả mong đợi": "Phương thức thanh toán được ghi nhận đúng hoặc hiển thị cảnh báo bắt buộc."
+    },
+    {
+        "Use Case": "UC_14: Xác nhận đơn",
+        "TC ID": "TC_14_01",
+        "Tên kịch bản kiểm thử": "Hoàn tất đơn hàng và kiểm tra trừ tồn kho trong CSDL",
+        "Mức độ ưu tiên": "High",
+        "Các bước thực hiện": "1. Nhấn Confirm Order.",
+        "Dữ liệu kiểm thử": "Action: Confirm",
+        "Kết quả mong đợi": "Báo thành công. Tạo bản ghi trong bảng order."
+    },
+    {
+        "Use Case": "UC_14: Xác nhận đơn",
+        "TC ID": "TC_14_02",
+        "Tên kịch bản kiểm thử": "Kiểm tra gửi Email xác nhận sau khi đặt hàng thành công",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Confirm đơn. 2. Admin check Stock SP.",
+        "Dữ liệu kiểm thử": "DB Check",
+        "Kết quả mong đợi": "Số lượng SP giảm đúng bằng số lượng đã đặt."
+    },
+    {
+        "Use Case": "UC_14: Xác nhận đơn",
+        "TC ID": "TC_14_03",
+        "Tên kịch bản kiểm thử": "Kiểm tra giỏ hàng được xóa sau khi đặt đơn thành công",
+        "Mức độ ưu tiên": "High",
+        "Các bước thực hiện": "1. Hoàn tất đặt hàng. 2. Xem lại Cart.",
+        "Dữ liệu kiểm thử": "Cart Status",
+        "Kết quả mong đợi": "Giỏ hàng trống, items về 0."
+    },
+    {
+        "Use Case": "UC_14: Xác nhận đơn",
+        "TC ID": "TC_14_04",
+        "Tên kịch bản kiểm thử": "Xác nhận đơn khi giỏ hàng rỗng",
+        "Mức độ ưu tiên": "High",
+        "Các bước thực hiện": "1. Hoàn tất đặt. 2. Kiểm tra Inbox Email.",
+        "Dữ liệu kiểm thử": "Email check",
+        "Kết quả mong đợi": "Có mail nội dung đơn hàng gửi tới khách."
+    },
+    {
+        "Use Case": "UC_14: Xác nhận đơn",
+        "TC ID": "TC_14_05",
+        "Tên kịch bản kiểm thử": "Xác nhận đơn khi sản phẩm trong giỏ vừa bị hết hàng",
+        "Mức độ ưu tiên": "High",
+        "Các bước thực hiện": "1. Sau đặt, xem đơn trong My Account.",
+        "Dữ liệu kiểm thử": "Status: Pending",
+        "Kết quả mong đợi": "Đơn hàng mặc định ở trạng thái 'Pending'."
+    },
+    {
+        "Use Case": "UC_14: Xác nhận đơn",
+        "TC ID": "TC_14_06",
+        "Tên kịch bản kiểm thử": "Xác nhận đơn khi giá sản phẩm thay đổi trước bước confirm",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Hoàn tất checkout. 2. Tại Confirm Order, thực hiện kịch bản 'Xác nhận đơn khi giá sản phẩm thay đổi trước bước confirm'. 3. Kiểm tra order/cart/email/stock.",
+        "Dữ liệu kiểm thử": "Order/cart/product/stock theo test case",
+        "Kết quả mong đợi": "Đơn hàng được tạo đúng, tồn kho/cart/email/order history cập nhật đúng hoặc thao tác sai bị chặn."
+    },
+    {
+        "Use Case": "UC_14: Xác nhận đơn",
+        "TC ID": "TC_14_07",
+        "Tên kịch bản kiểm thử": "Kiểm tra order total gồm subtotal, shipping, tax, discount",
+        "Mức độ ưu tiên": "High",
+        "Các bước thực hiện": "1. Hoàn tất checkout. 2. Tại Confirm Order, thực hiện kịch bản 'Kiểm tra order total gồm subtotal, shipping, tax, discount'. 3. Kiểm tra order/cart/email/stock.",
+        "Dữ liệu kiểm thử": "Order/cart/product/stock theo test case",
+        "Kết quả mong đợi": "Đơn hàng được tạo đúng, tồn kho/cart/email/order history cập nhật đúng hoặc thao tác sai bị chặn."
+    },
+    {
+        "Use Case": "UC_14: Xác nhận đơn",
+        "TC ID": "TC_14_08",
+        "Tên kịch bản kiểm thử": "Kiểm tra tạo order_id duy nhất cho mỗi đơn hàng",
+        "Mức độ ưu tiên": "High",
+        "Các bước thực hiện": "1. Hoàn tất checkout. 2. Tại Confirm Order, thực hiện kịch bản 'Kiểm tra tạo order_id duy nhất cho mỗi đơn hàng'. 3. Kiểm tra order/cart/email/stock.",
+        "Dữ liệu kiểm thử": "Order/cart/product/stock theo test case",
+        "Kết quả mong đợi": "Đơn hàng được tạo đúng, tồn kho/cart/email/order history cập nhật đúng hoặc thao tác sai bị chặn."
+    },
+    {
+        "Use Case": "UC_14: Xác nhận đơn",
+        "TC ID": "TC_14_09",
+        "Tên kịch bản kiểm thử": "Kiểm tra order history được ghi sau khi đặt hàng",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Hoàn tất checkout. 2. Tại Confirm Order, thực hiện kịch bản 'Kiểm tra order history được ghi sau khi đặt hàng'. 3. Kiểm tra order/cart/email/stock.",
+        "Dữ liệu kiểm thử": "Order/cart/product/stock theo test case",
+        "Kết quả mong đợi": "Đơn hàng được tạo đúng, tồn kho/cart/email/order history cập nhật đúng hoặc thao tác sai bị chặn."
+    },
+    {
+        "Use Case": "UC_14: Xác nhận đơn",
+        "TC ID": "TC_14_10",
+        "Tên kịch bản kiểm thử": "Kiểm tra điểm thưởng/coupon/voucher được cập nhật sau đặt hàng",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Hoàn tất checkout. 2. Tại Confirm Order, thực hiện kịch bản 'Kiểm tra điểm thưởng/coupon/voucher được cập nhật sau đặt hàng'. 3. Kiểm tra order/cart/email/stock.",
+        "Dữ liệu kiểm thử": "Order/cart/product/stock theo test case",
+        "Kết quả mong đợi": "Đơn hàng được tạo đúng, tồn kho/cart/email/order history cập nhật đúng hoặc thao tác sai bị chặn."
+    },
+    {
+        "Use Case": "UC_15: Lịch sử đơn",
+        "TC ID": "TC_15_01",
+        "Tên kịch bản kiểm thử": "Xem danh sách đơn hàng đã đặt và trạng thái đơn",
+        "Mức độ ưu tiên": "Low",
+        "Các bước thực hiện": "1. Vào My Account -> Order History.",
+        "Dữ liệu kiểm thử": "List Orders",
+        "Kết quả mong đợi": "Hiện đủ mã đơn, ngày đặt, tổng tiền."
+    },
+    {
+        "Use Case": "UC_15: Lịch sử đơn",
+        "TC ID": "TC_15_02",
+        "Tên kịch bản kiểm thử": "Xem chi tiết thông tin của một đơn hàng cũ",
+        "Mức độ ưu tiên": "Low",
+        "Các bước thực hiện": "1. Nhấn icon View.",
+        "Dữ liệu kiểm thử": "ID: #101",
+        "Kết quả mong đợi": "Hiện đúng các SP đã mua và giá lúc đặt."
+    },
+    {
+        "Use Case": "UC_15: Lịch sử đơn",
+        "TC ID": "TC_15_03",
+        "Tên kịch bản kiểm thử": "Khách chưa đăng nhập truy cập lịch sử đơn hàng",
+        "Mức độ ưu tiên": "High",
+        "Các bước thực hiện": "1. Chọn chế độ xem 6 tháng qua.",
+        "Dữ liệu kiểm thử": "Filter: Time",
+        "Kết quả mong đợi": "Hệ thống lọc đơn theo đúng mốc thời gian."
+    },
+    {
+        "Use Case": "UC_15: Lịch sử đơn",
+        "TC ID": "TC_15_04",
+        "Tên kịch bản kiểm thử": "Khách A không xem được chi tiết đơn hàng của khách B",
+        "Mức độ ưu tiên": "High",
+        "Các bước thực hiện": "1. Đăng nhập. 2. Vào My Account -> Order History. 3. Thực hiện kịch bản 'Khách A không xem được chi tiết đơn hàng của khách B'.",
+        "Dữ liệu kiểm thử": "Order/customer/filter theo test case",
+        "Kết quả mong đợi": "Lịch sử và chi tiết đơn hiển thị đúng, không lộ đơn của khách khác."
+    },
+    {
+        "Use Case": "UC_15: Lịch sử đơn",
+        "TC ID": "TC_15_05",
+        "Tên kịch bản kiểm thử": "Kiểm tra phân trang lịch sử đơn khi có nhiều đơn",
+        "Mức độ ưu tiên": "Low",
+        "Các bước thực hiện": "1. Đăng nhập. 2. Vào My Account -> Order History. 3. Thực hiện kịch bản 'Kiểm tra phân trang lịch sử đơn khi có nhiều đơn'.",
+        "Dữ liệu kiểm thử": "Order/customer/filter theo test case",
+        "Kết quả mong đợi": "Lịch sử và chi tiết đơn hiển thị đúng, không lộ đơn của khách khác."
+    },
+    {
+        "Use Case": "UC_15: Lịch sử đơn",
+        "TC ID": "TC_15_06",
+        "Tên kịch bản kiểm thử": "Kiểm tra lọc/sắp xếp lịch sử đơn nếu giao diện hỗ trợ",
+        "Mức độ ưu tiên": "Low",
+        "Các bước thực hiện": "1. Đăng nhập. 2. Vào My Account -> Order History. 3. Thực hiện kịch bản 'Kiểm tra lọc/sắp xếp lịch sử đơn nếu giao diện hỗ trợ'.",
+        "Dữ liệu kiểm thử": "Order/customer/filter theo test case",
+        "Kết quả mong đợi": "Lịch sử và chi tiết đơn hiển thị đúng, không lộ đơn của khách khác."
+    },
+    {
+        "Use Case": "UC_15: Lịch sử đơn",
+        "TC ID": "TC_15_07",
+        "Tên kịch bản kiểm thử": "Kiểm tra chi tiết sản phẩm, option, số lượng trong đơn cũ",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Đăng nhập. 2. Vào My Account -> Order History. 3. Thực hiện kịch bản 'Kiểm tra chi tiết sản phẩm, option, số lượng trong đơn cũ'.",
+        "Dữ liệu kiểm thử": "Order/customer/filter theo test case",
+        "Kết quả mong đợi": "Lịch sử và chi tiết đơn hiển thị đúng, không lộ đơn của khách khác."
+    },
+    {
+        "Use Case": "UC_15: Lịch sử đơn",
+        "TC ID": "TC_15_08",
+        "Tên kịch bản kiểm thử": "Kiểm tra tổng tiền đơn cũ giữ nguyên sau khi giá sản phẩm thay đổi",
+        "Mức độ ưu tiên": "High",
+        "Các bước thực hiện": "1. Đăng nhập. 2. Vào My Account -> Order History. 3. Thực hiện kịch bản 'Kiểm tra tổng tiền đơn cũ giữ nguyên sau khi giá sản phẩm thay đổi'.",
+        "Dữ liệu kiểm thử": "Order/customer/filter theo test case",
+        "Kết quả mong đợi": "Lịch sử và chi tiết đơn hiển thị đúng, không lộ đơn của khách khác."
+    },
+    {
+        "Use Case": "UC_15: Lịch sử đơn",
+        "TC ID": "TC_15_09",
+        "Tên kịch bản kiểm thử": "Kiểm tra chức năng reorder từ đơn hàng cũ",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Đăng nhập. 2. Vào My Account -> Order History. 3. Thực hiện kịch bản 'Kiểm tra chức năng reorder từ đơn hàng cũ'.",
+        "Dữ liệu kiểm thử": "Order/customer/filter theo test case",
+        "Kết quả mong đợi": "Lịch sử và chi tiết đơn hiển thị đúng, không lộ đơn của khách khác."
+    },
+    {
+        "Use Case": "UC_15: Lịch sử đơn",
+        "TC ID": "TC_15_10",
+        "Tên kịch bản kiểm thử": "Reorder khi sản phẩm cũ đã bị disable",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Đăng nhập. 2. Vào My Account -> Order History. 3. Thực hiện kịch bản 'Reorder khi sản phẩm cũ đã bị disable'.",
+        "Dữ liệu kiểm thử": "Order/customer/filter theo test case",
+        "Kết quả mong đợi": "Lịch sử và chi tiết đơn hiển thị đúng, không lộ đơn của khách khác."
+    },
+    {
+        "Use Case": "UC_16: Sửa TT cá nhân",
+        "TC ID": "TC_16_01",
+        "Tên kịch bản kiểm thử": "Cập nhật thành công Họ tên, Email, Điện thoại",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Vào Edit Account. 2. Sửa Lastname. 3. Continue.",
+        "Dữ liệu kiểm thử": "New Lastname",
+        "Kết quả mong đợi": "Báo Success. Dữ liệu trong DB cập nhật mới."
+    },
+    {
+        "Use Case": "UC_16: Sửa TT cá nhân",
+        "TC ID": "TC_16_02",
+        "Tên kịch bản kiểm thử": "Kiểm tra lỗi khi đổi sang Email đã có người sử dụng",
+        "Mức độ ưu tiên": "High",
+        "Các bước thực hiện": "1. Đổi Email sang 1 mail đã có khách dùng.",
+        "Dữ liệu kiểm thử": "Email: Duplicate",
+        "Kết quả mong đợi": "Cảnh báo: \"E-Mail address is already registered!\"."
+    },
+    {
+        "Use Case": "UC_16: Sửa TT cá nhân",
+        "TC ID": "TC_16_03",
+        "Tên kịch bản kiểm thử": "Cập nhật thông tin với First Name bỏ trống",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Vào Change Password. 2. Nhập mới. 3. Save.",
+        "Dữ liệu kiểm thử": "New Pass",
+        "Kết quả mong đợi": "Đăng nhập bằng Pass mới thành công."
+    },
+    {
+        "Use Case": "UC_16: Sửa TT cá nhân",
+        "TC ID": "TC_16_04",
+        "Tên kịch bản kiểm thử": "Cập nhật thông tin với Last Name bỏ trống",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Nhập Phone mới. 2. Continue.",
+        "Dữ liệu kiểm thử": "Phone: 098...",
+        "Kết quả mong đợi": "Cập nhật thành công số điện thoại mới."
+    },
+    {
+        "Use Case": "UC_16: Sửa TT cá nhân",
+        "TC ID": "TC_16_05",
+        "Tên kịch bản kiểm thử": "Cập nhật số điện thoại sai định dạng",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Đăng nhập. 2. Vào Edit Account/Change Password. 3. Nhập dữ liệu theo kịch bản 'Cập nhật số điện thoại sai định dạng'. 4. Save.",
+        "Dữ liệu kiểm thử": "Account data/email/password/phone theo test case",
+        "Kết quả mong đợi": "Thông tin hợp lệ được cập nhật; dữ liệu trùng hoặc sai định dạng bị cảnh báo."
+    },
+    {
+        "Use Case": "UC_16: Sửa TT cá nhân",
+        "TC ID": "TC_16_06",
+        "Tên kịch bản kiểm thử": "Cập nhật Email sai định dạng",
+        "Mức độ ưu tiên": "High",
+        "Các bước thực hiện": "1. Đăng nhập. 2. Vào Edit Account/Change Password. 3. Nhập dữ liệu theo kịch bản 'Cập nhật Email sai định dạng'. 4. Save.",
+        "Dữ liệu kiểm thử": "Account data/email/password/phone theo test case",
+        "Kết quả mong đợi": "Thông tin hợp lệ được cập nhật; dữ liệu trùng hoặc sai định dạng bị cảnh báo."
+    },
+    {
+        "Use Case": "UC_16: Sửa TT cá nhân",
+        "TC ID": "TC_16_07",
+        "Tên kịch bản kiểm thử": "Cập nhật Email có khoảng trắng đầu/cuối",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Đăng nhập. 2. Vào Edit Account/Change Password. 3. Nhập dữ liệu theo kịch bản 'Cập nhật Email có khoảng trắng đầu/cuối'. 4. Save.",
+        "Dữ liệu kiểm thử": "Account data/email/password/phone theo test case",
+        "Kết quả mong đợi": "Thông tin hợp lệ được cập nhật; dữ liệu trùng hoặc sai định dạng bị cảnh báo."
+    },
+    {
+        "Use Case": "UC_16: Sửa TT cá nhân",
+        "TC ID": "TC_16_08",
+        "Tên kịch bản kiểm thử": "Cập nhật họ tên chứa HTML/script",
+        "Mức độ ưu tiên": "High",
+        "Các bước thực hiện": "1. Đăng nhập. 2. Vào Edit Account/Change Password. 3. Nhập dữ liệu theo kịch bản 'Cập nhật họ tên chứa HTML/script'. 4. Save.",
+        "Dữ liệu kiểm thử": "Account data/email/password/phone theo test case",
+        "Kết quả mong đợi": "Thông tin hợp lệ được cập nhật; dữ liệu trùng hoặc sai định dạng bị cảnh báo."
+    },
+    {
+        "Use Case": "UC_16: Sửa TT cá nhân",
+        "TC ID": "TC_16_09",
+        "Tên kịch bản kiểm thử": "Kiểm tra thông tin mới hiển thị trong Account sau khi cập nhật",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Đăng nhập. 2. Vào Edit Account/Change Password. 3. Nhập dữ liệu theo kịch bản 'Kiểm tra thông tin mới hiển thị trong Account sau khi cập nhật'. 4. Save.",
+        "Dữ liệu kiểm thử": "Account data/email/password/phone theo test case",
+        "Kết quả mong đợi": "Thông tin hợp lệ được cập nhật; dữ liệu trùng hoặc sai định dạng bị cảnh báo."
+    },
+    {
+        "Use Case": "UC_16: Sửa TT cá nhân",
+        "TC ID": "TC_16_10",
+        "Tên kịch bản kiểm thử": "Kiểm tra không mất session sau khi cập nhật thông tin",
+        "Mức độ ưu tiên": "Low",
+        "Các bước thực hiện": "1. Đăng nhập. 2. Vào Edit Account/Change Password. 3. Nhập dữ liệu theo kịch bản 'Kiểm tra không mất session sau khi cập nhật thông tin'. 4. Save.",
+        "Dữ liệu kiểm thử": "Account data/email/password/phone theo test case",
+        "Kết quả mong đợi": "Thông tin hợp lệ được cập nhật; dữ liệu trùng hoặc sai định dạng bị cảnh báo."
+    },
+    {
+        "Use Case": "UC_17: Quản lý SP",
+        "TC ID": "TC_17_01",
+        "Tên kịch bản kiểm thử": "Admin thêm mới sản phẩm đầy đủ thông tin",
+        "Mức độ ưu tiên": "High",
+        "Các bước thực hiện": "1. Add New. 2. Nhập Data. 3. Save.",
+        "Dữ liệu kiểm thử": "Data: SP Test",
+        "Kết quả mong đợi": "SP mới hiện ở cả Admin và Storefront."
+    },
+    {
+        "Use Case": "UC_17: Quản lý SP",
+        "TC ID": "TC_17_02",
+        "Tên kịch bản kiểm thử": "Admin chỉnh sửa giá và số lượng sản phẩm",
+        "Mức độ ưu tiên": "High",
+        "Các bước thực hiện": "1. Edit SP. 2. Sửa Price 100 -> 200. 3. Save.",
+        "Dữ liệu kiểm thử": "Price: 200",
+        "Kết quả mong đợi": "Giá ngoài web Storefront tự động đổi theo."
+    },
+    {
+        "Use Case": "UC_17: Quản lý SP",
+        "TC ID": "TC_17_03",
+        "Tên kịch bản kiểm thử": "Admin xóa sản phẩm chưa phát sinh đơn hàng",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Tích chọn SP. 2. Nhấn Delete.",
+        "Dữ liệu kiểm thử": "Action: Delete",
+        "Kết quả mong đợi": "SP biến mất hoàn toàn khỏi hệ thống."
+    },
+    {
+        "Use Case": "UC_17: Quản lý SP",
+        "TC ID": "TC_17_04",
+        "Tên kịch bản kiểm thử": "Kiểm tra lỗi khi xóa sản phẩm đang nằm trong đơn hàng",
+        "Mức độ ưu tiên": "High",
+        "Các bước thực hiện": "1. Xóa SP đang có khách mua.",
+        "Dữ liệu kiểm thử": "FK Check",
+        "Kết quả mong đợi": "Hệ thống chặn xóa để bảo vệ data đơn hàng."
+    },
+    {
+        "Use Case": "UC_17: Quản lý SP",
+        "TC ID": "TC_17_05",
+        "Tên kịch bản kiểm thử": "Admin lọc sản phẩm theo ID hoặc Trạng thái trong Admin",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Nhập ID/Tên vào bộ lọc Admin.",
+        "Dữ liệu kiểm thử": "Filter: iMac",
+        "Kết quả mong đợi": "Hiển thị chính xác sản phẩm cần tìm."
+    },
+    {
+        "Use Case": "UC_17: Quản lý SP",
+        "TC ID": "TC_17_06",
+        "Tên kịch bản kiểm thử": "Admin thêm sản phẩm thiếu Product Name",
+        "Mức độ ưu tiên": "High",
+        "Các bước thực hiện": "1. Đăng nhập Admin. 2. Vào Catalog -> Products. 3. Thực hiện kịch bản 'Admin thêm sản phẩm thiếu Product Name'. 4. Save/Delete/Filter.",
+        "Dữ liệu kiểm thử": "Product data/filter/status theo test case",
+        "Kết quả mong đợi": "Sản phẩm được quản lý đúng; dữ liệu storefront và ràng buộc hệ thống phản ánh đúng."
+    },
+    {
+        "Use Case": "UC_17: Quản lý SP",
+        "TC ID": "TC_17_07",
+        "Tên kịch bản kiểm thử": "Admin thêm sản phẩm thiếu Meta Tag Title",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Đăng nhập Admin. 2. Vào Catalog -> Products. 3. Thực hiện kịch bản 'Admin thêm sản phẩm thiếu Meta Tag Title'. 4. Save/Delete/Filter.",
+        "Dữ liệu kiểm thử": "Product data/filter/status theo test case",
+        "Kết quả mong đợi": "Sản phẩm được quản lý đúng; dữ liệu storefront và ràng buộc hệ thống phản ánh đúng."
+    },
+    {
+        "Use Case": "UC_17: Quản lý SP",
+        "TC ID": "TC_17_08",
+        "Tên kịch bản kiểm thử": "Admin thêm sản phẩm với model bị bỏ trống",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Đăng nhập Admin. 2. Vào Catalog -> Products. 3. Thực hiện kịch bản 'Admin thêm sản phẩm với model bị bỏ trống'. 4. Save/Delete/Filter.",
+        "Dữ liệu kiểm thử": "Product data/filter/status theo test case",
+        "Kết quả mong đợi": "Sản phẩm được quản lý đúng; dữ liệu storefront và ràng buộc hệ thống phản ánh đúng."
+    },
+    {
+        "Use Case": "UC_17: Quản lý SP",
+        "TC ID": "TC_17_09",
+        "Tên kịch bản kiểm thử": "Admin thêm sản phẩm có giá âm",
+        "Mức độ ưu tiên": "High",
+        "Các bước thực hiện": "1. Đăng nhập Admin. 2. Vào Catalog -> Products. 3. Thực hiện kịch bản 'Admin thêm sản phẩm có giá âm'. 4. Save/Delete/Filter.",
+        "Dữ liệu kiểm thử": "Product data/filter/status theo test case",
+        "Kết quả mong đợi": "Sản phẩm được quản lý đúng; dữ liệu storefront và ràng buộc hệ thống phản ánh đúng."
+    },
+    {
+        "Use Case": "UC_17: Quản lý SP",
+        "TC ID": "TC_17_10",
+        "Tên kịch bản kiểm thử": "Admin thêm sản phẩm với số lượng âm",
+        "Mức độ ưu tiên": "High",
+        "Các bước thực hiện": "1. Đăng nhập Admin. 2. Vào Catalog -> Products. 3. Thực hiện kịch bản 'Admin thêm sản phẩm với số lượng âm'. 4. Save/Delete/Filter.",
+        "Dữ liệu kiểm thử": "Product data/filter/status theo test case",
+        "Kết quả mong đợi": "Sản phẩm được quản lý đúng; dữ liệu storefront và ràng buộc hệ thống phản ánh đúng."
+    },
+    {
+        "Use Case": "UC_18: Quản lý ĐH",
+        "TC ID": "TC_18_01",
+        "Tên kịch bản kiểm thử": "Admin cập nhật trạng thái đơn hàng",
+        "Mức độ ưu tiên": "High",
+        "Các bước thực hiện": "1. Đổi Pending -> Complete. 2. Save.",
+        "Dữ liệu kiểm thử": "Status: Complete",
+        "Kết quả mong đợi": "Trạng thái cập nhật, khách nhận được mail."
+    },
+    {
+        "Use Case": "UC_18: Quản lý ĐH",
+        "TC ID": "TC_18_02",
+        "Tên kịch bản kiểm thử": "Admin in hóa đơn cho đơn hàng",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Tích đơn. 2. Nhấn Print Invoice.",
+        "Dữ liệu kiểm thử": "Action: Print",
+        "Kết quả mong đợi": "Mở trang in hóa đơn chứa đầy đủ logo, TT đơn."
+    },
+    {
+        "Use Case": "UC_18: Quản lý ĐH",
+        "TC ID": "TC_18_03",
+        "Tên kịch bản kiểm thử": "Admin xóa đơn hàng đã hoàn thành",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Chọn đơn cũ. 2. Nhấn Delete.",
+        "Dữ liệu kiểm thử": "Action: Delete",
+        "Kết quả mong đợi": "Đơn hàng mất khỏi danh sách quản lý."
+    },
+    {
+        "Use Case": "UC_18: Quản lý ĐH",
+        "TC ID": "TC_18_04",
+        "Tên kịch bản kiểm thử": "Admin xem chi tiết đơn hàng từ danh sách đơn",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Nhập tên 'Tung' vào Filter.",
+        "Dữ liệu kiểm thử": "Filter: Tung",
+        "Kết quả mong đợi": "Hiện tất cả các đơn của khách tên Tung."
+    },
+    {
+        "Use Case": "UC_18: Quản lý ĐH",
+        "TC ID": "TC_18_05",
+        "Tên kịch bản kiểm thử": "Admin lọc đơn hàng theo order ID",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Nhấn Print Shipping List.",
+        "Dữ liệu kiểm thử": "Action: Print",
+        "Kết quả mong đợi": "Hiện danh sách đóng gói (không kèm giá tiền)."
+    },
+    {
+        "Use Case": "UC_18: Quản lý ĐH",
+        "TC ID": "TC_18_06",
+        "Tên kịch bản kiểm thử": "Admin lọc đơn hàng theo khách hàng",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Đăng nhập Admin. 2. Vào Sales -> Orders. 3. Thực hiện kịch bản 'Admin lọc đơn hàng theo khách hàng'.",
+        "Dữ liệu kiểm thử": "Order ID/status/filter/action theo test case",
+        "Kết quả mong đợi": "Đơn hàng được cập nhật, lọc, in hoặc xóa đúng theo quyền và nghiệp vụ."
+    },
+    {
+        "Use Case": "UC_18: Quản lý ĐH",
+        "TC ID": "TC_18_07",
+        "Tên kịch bản kiểm thử": "Admin lọc đơn hàng theo trạng thái",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Đăng nhập Admin. 2. Vào Sales -> Orders. 3. Thực hiện kịch bản 'Admin lọc đơn hàng theo trạng thái'.",
+        "Dữ liệu kiểm thử": "Order ID/status/filter/action theo test case",
+        "Kết quả mong đợi": "Đơn hàng được cập nhật, lọc, in hoặc xóa đúng theo quyền và nghiệp vụ."
+    },
+    {
+        "Use Case": "UC_18: Quản lý ĐH",
+        "TC ID": "TC_18_08",
+        "Tên kịch bản kiểm thử": "Admin lọc đơn hàng theo khoảng ngày đặt",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Đăng nhập Admin. 2. Vào Sales -> Orders. 3. Thực hiện kịch bản 'Admin lọc đơn hàng theo khoảng ngày đặt'.",
+        "Dữ liệu kiểm thử": "Order ID/status/filter/action theo test case",
+        "Kết quả mong đợi": "Đơn hàng được cập nhật, lọc, in hoặc xóa đúng theo quyền và nghiệp vụ."
+    },
+    {
+        "Use Case": "UC_18: Quản lý ĐH",
+        "TC ID": "TC_18_09",
+        "Tên kịch bản kiểm thử": "Admin thêm order history có notify customer",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Đăng nhập Admin. 2. Vào Sales -> Orders. 3. Thực hiện kịch bản 'Admin thêm order history có notify customer'.",
+        "Dữ liệu kiểm thử": "Order ID/status/filter/action theo test case",
+        "Kết quả mong đợi": "Đơn hàng được cập nhật, lọc, in hoặc xóa đúng theo quyền và nghiệp vụ."
+    },
+    {
+        "Use Case": "UC_18: Quản lý ĐH",
+        "TC ID": "TC_18_10",
+        "Tên kịch bản kiểm thử": "Admin thêm order history không notify customer",
+        "Mức độ ưu tiên": "Low",
+        "Các bước thực hiện": "1. Đăng nhập Admin. 2. Vào Sales -> Orders. 3. Thực hiện kịch bản 'Admin thêm order history không notify customer'.",
+        "Dữ liệu kiểm thử": "Order ID/status/filter/action theo test case",
+        "Kết quả mong đợi": "Đơn hàng được cập nhật, lọc, in hoặc xóa đúng theo quyền và nghiệp vụ."
+    },
+    {
+        "Use Case": "UC_19: Cấu hình tiền",
+        "TC ID": "TC_19_01",
+        "Tên kịch bản kiểm thử": "Thay đổi tỷ giá hối đoái và kiểm tra giá SP Storefront",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. USD sang VND (1 -> 25k). 2. Save.",
+        "Dữ liệu kiểm thử": "Rate: 25000",
+        "Kết quả mong đợi": "Giá ngoài web tự động nhân theo tỷ giá mới."
+    },
+    {
+        "Use Case": "UC_19: Cấu hình tiền",
+        "TC ID": "TC_19_02",
+        "Tên kịch bản kiểm thử": "Thêm mới một loại tiền tệ vào hệ thống",
+        "Mức độ ưu tiên": "Low",
+        "Các bước thực hiện": "1. Add Currency EUR. 2. Save.",
+        "Dữ liệu kiểm thử": "Currency: EUR",
+        "Kết quả mong đợi": "EUR xuất hiện ở menu chọn tiền tệ Header."
+    },
+    {
+        "Use Case": "UC_19: Cấu hình tiền",
+        "TC ID": "TC_19_03",
+        "Tên kịch bản kiểm thử": "Kiểm tra tự động cập nhật tỷ giá qua API",
+        "Mức độ ưu tiên": "Low",
+        "Các bước thực hiện": "1. Cố xóa USD (đang set Default).",
+        "Dữ liệu kiểm thử": "Action: Delete",
+        "Kết quả mong đợi": "Báo lỗi không cho xóa đơn vị tiền tệ mặc định."
+    },
+    {
+        "Use Case": "UC_19: Cấu hình tiền",
+        "TC ID": "TC_19_04",
+        "Tên kịch bản kiểm thử": "Disable một loại tiền tệ và kiểm tra không còn hiển thị storefront",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Bật Auto Update tỷ giá.",
+        "Dữ liệu kiểm thử": "Sync: Auto",
+        "Kết quả mong đợi": "Tỷ giá khớp với nguồn API quốc tế cung cấp."
+    },
+    {
+        "Use Case": "UC_19: Cấu hình tiền",
+        "TC ID": "TC_19_05",
+        "Tên kịch bản kiểm thử": "Xóa loại tiền tệ không phải mặc định",
+        "Mức độ ưu tiên": "Low",
+        "Các bước thực hiện": "1. Đăng nhập Admin. 2. Vào System -> Localisation -> Currencies. 3. Thực hiện kịch bản 'Xóa loại tiền tệ không phải mặc định'. 4. Kiểm tra Storefront.",
+        "Dữ liệu kiểm thử": "Currency/rate/status/default theo test case",
+        "Kết quả mong đợi": "Tiền tệ và tỷ giá áp dụng đúng trên storefront/cart/checkout; dữ liệu sai bị chặn."
+    },
+    {
+        "Use Case": "UC_19: Cấu hình tiền",
+        "TC ID": "TC_19_06",
+        "Tên kịch bản kiểm thử": "Kiểm tra không cho xóa tiền tệ mặc định đang dùng",
+        "Mức độ ưu tiên": "High",
+        "Các bước thực hiện": "1. Đăng nhập Admin. 2. Vào System -> Localisation -> Currencies. 3. Thực hiện kịch bản 'Kiểm tra không cho xóa tiền tệ mặc định đang dùng'. 4. Kiểm tra Storefront.",
+        "Dữ liệu kiểm thử": "Currency/rate/status/default theo test case",
+        "Kết quả mong đợi": "Tiền tệ và tỷ giá áp dụng đúng trên storefront/cart/checkout; dữ liệu sai bị chặn."
+    },
+    {
+        "Use Case": "UC_19: Cấu hình tiền",
+        "TC ID": "TC_19_07",
+        "Tên kịch bản kiểm thử": "Thay đổi tiền tệ mặc định của store",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Đăng nhập Admin. 2. Vào System -> Localisation -> Currencies. 3. Thực hiện kịch bản 'Thay đổi tiền tệ mặc định của store'. 4. Kiểm tra Storefront.",
+        "Dữ liệu kiểm thử": "Currency/rate/status/default theo test case",
+        "Kết quả mong đợi": "Tiền tệ và tỷ giá áp dụng đúng trên storefront/cart/checkout; dữ liệu sai bị chặn."
+    },
+    {
+        "Use Case": "UC_19: Cấu hình tiền",
+        "TC ID": "TC_19_08",
+        "Tên kịch bản kiểm thử": "Kiểm tra định dạng ký hiệu tiền trước/sau số tiền",
+        "Mức độ ưu tiên": "Low",
+        "Các bước thực hiện": "1. Đăng nhập Admin. 2. Vào System -> Localisation -> Currencies. 3. Thực hiện kịch bản 'Kiểm tra định dạng ký hiệu tiền trước/sau số tiền'. 4. Kiểm tra Storefront.",
+        "Dữ liệu kiểm thử": "Currency/rate/status/default theo test case",
+        "Kết quả mong đợi": "Tiền tệ và tỷ giá áp dụng đúng trên storefront/cart/checkout; dữ liệu sai bị chặn."
+    },
+    {
+        "Use Case": "UC_19: Cấu hình tiền",
+        "TC ID": "TC_19_09",
+        "Tên kịch bản kiểm thử": "Kiểm tra làm tròn giá sau khi đổi tiền tệ",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Đăng nhập Admin. 2. Vào System -> Localisation -> Currencies. 3. Thực hiện kịch bản 'Kiểm tra làm tròn giá sau khi đổi tiền tệ'. 4. Kiểm tra Storefront.",
+        "Dữ liệu kiểm thử": "Currency/rate/status/default theo test case",
+        "Kết quả mong đợi": "Tiền tệ và tỷ giá áp dụng đúng trên storefront/cart/checkout; dữ liệu sai bị chặn."
+    },
+    {
+        "Use Case": "UC_19: Cấu hình tiền",
+        "TC ID": "TC_19_10",
+        "Tên kịch bản kiểm thử": "Kiểm tra giá trong giỏ hàng cập nhật khi đổi tiền tệ",
+        "Mức độ ưu tiên": "High",
+        "Các bước thực hiện": "1. Đăng nhập Admin. 2. Vào System -> Localisation -> Currencies. 3. Thực hiện kịch bản 'Kiểm tra giá trong giỏ hàng cập nhật khi đổi tiền tệ'. 4. Kiểm tra Storefront.",
+        "Dữ liệu kiểm thử": "Currency/rate/status/default theo test case",
+        "Kết quả mong đợi": "Tiền tệ và tỷ giá áp dụng đúng trên storefront/cart/checkout; dữ liệu sai bị chặn."
+    },
+    {
+        "Use Case": "UC_20: Nhóm khách",
+        "TC ID": "TC_20_01",
+        "Tên kịch bản kiểm thử": "Tạo mới nhóm khách hàng",
+        "Mức độ ưu tiên": "Low",
+        "Các bước thực hiện": "1. Add Customer Group 'VIP'. 2. Save.",
+        "Dữ liệu kiểm thử": "Name: VIP",
+        "Kết quả mong đợi": "Nhóm VIP xuất hiện trong danh mục phân loại."
+    },
+    {
+        "Use Case": "UC_20: Nhóm khách",
+        "TC ID": "TC_20_02",
+        "Tên kịch bản kiểm thử": "Áp dụng giá ưu đãi riêng cho một nhóm cụ thể",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Tab Discount của SP. 2. Set giá cho VIP.",
+        "Dữ liệu kiểm thử": "VIP Price: 50$",
+        "Kết quả mong đợi": "Chỉ khách nhóm VIP mới thấy giá 50$."
+    },
+    {
+        "Use Case": "UC_20: Nhóm khách",
+        "TC ID": "TC_20_03",
+        "Tên kịch bản kiểm thử": "Gán khách hàng vào nhóm khách hàng mới",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Vào Edit Customer. 2. Đổi Group -> VIP.",
+        "Dữ liệu kiểm thử": "Action: Assign",
+        "Kết quả mong đợi": "Khách nhận được các đặc quyền của nhóm VIP."
+    },
+    {
+        "Use Case": "UC_20: Nhóm khách",
+        "TC ID": "TC_20_04",
+        "Tên kịch bản kiểm thử": "Tạo nhóm khách hàng trùng tên",
+        "Mức độ ưu tiên": "Low",
+        "Các bước thực hiện": "1. Set nhóm yêu cầu Admin duyệt.",
+        "Dữ liệu kiểm thử": "Approve: Yes",
+        "Kết quả mong đợi": "Khách đăng ký nhóm này chưa thể Login ngay."
+    },
+    {
+        "Use Case": "UC_20: Nhóm khách",
+        "TC ID": "TC_20_05",
+        "Tên kịch bản kiểm thử": "Tạo nhóm khách hàng thiếu tên nhóm",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Đăng nhập Admin. 2. Vào Customers -> Customer Groups/Customers. 3. Thực hiện kịch bản 'Tạo nhóm khách hàng thiếu tên nhóm'.",
+        "Dữ liệu kiểm thử": "Customer group/customer/discount theo test case",
+        "Kết quả mong đợi": "Nhóm khách được tạo, gán và áp dụng ưu đãi đúng theo kịch bản."
+    },
+    {
+        "Use Case": "UC_20: Nhóm khách",
+        "TC ID": "TC_20_06",
+        "Tên kịch bản kiểm thử": "Disable nhóm khách hàng và kiểm tra không chọn được khi đăng ký",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Đăng nhập Admin. 2. Vào Customers -> Customer Groups/Customers. 3. Thực hiện kịch bản 'Disable nhóm khách hàng và kiểm tra không chọn được khi đăng ký'.",
+        "Dữ liệu kiểm thử": "Customer group/customer/discount theo test case",
+        "Kết quả mong đợi": "Nhóm khách được tạo, gán và áp dụng ưu đãi đúng theo kịch bản."
+    },
+    {
+        "Use Case": "UC_20: Nhóm khách",
+        "TC ID": "TC_20_07",
+        "Tên kịch bản kiểm thử": "Cấu hình nhóm khách hàng mặc định cho store",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Đăng nhập Admin. 2. Vào Customers -> Customer Groups/Customers. 3. Thực hiện kịch bản 'Cấu hình nhóm khách hàng mặc định cho store'.",
+        "Dữ liệu kiểm thử": "Customer group/customer/discount theo test case",
+        "Kết quả mong đợi": "Nhóm khách được tạo, gán và áp dụng ưu đãi đúng theo kịch bản."
+    },
+    {
+        "Use Case": "UC_20: Nhóm khách",
+        "TC ID": "TC_20_08",
+        "Tên kịch bản kiểm thử": "Kiểm tra khách mới được gán đúng nhóm mặc định",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Đăng nhập Admin. 2. Vào Customers -> Customer Groups/Customers. 3. Thực hiện kịch bản 'Kiểm tra khách mới được gán đúng nhóm mặc định'.",
+        "Dữ liệu kiểm thử": "Customer group/customer/discount theo test case",
+        "Kết quả mong đợi": "Nhóm khách được tạo, gán và áp dụng ưu đãi đúng theo kịch bản."
+    },
+    {
+        "Use Case": "UC_20: Nhóm khách",
+        "TC ID": "TC_20_09",
+        "Tên kịch bản kiểm thử": "Áp dụng giá đặc biệt theo nhóm khách sau khi đăng nhập",
+        "Mức độ ưu tiên": "High",
+        "Các bước thực hiện": "1. Đăng nhập Admin. 2. Vào Customers -> Customer Groups/Customers. 3. Thực hiện kịch bản 'Áp dụng giá đặc biệt theo nhóm khách sau khi đăng nhập'.",
+        "Dữ liệu kiểm thử": "Customer group/customer/discount theo test case",
+        "Kết quả mong đợi": "Nhóm khách được tạo, gán và áp dụng ưu đãi đúng theo kịch bản."
+    },
+    {
+        "Use Case": "UC_20: Nhóm khách",
+        "TC ID": "TC_20_10",
+        "Tên kịch bản kiểm thử": "Kiểm tra khách khác nhóm không thấy giá ưu đãi riêng",
+        "Mức độ ưu tiên": "High",
+        "Các bước thực hiện": "1. Đăng nhập Admin. 2. Vào Customers -> Customer Groups/Customers. 3. Thực hiện kịch bản 'Kiểm tra khách khác nhóm không thấy giá ưu đãi riêng'.",
+        "Dữ liệu kiểm thử": "Customer group/customer/discount theo test case",
+        "Kết quả mong đợi": "Nhóm khách được tạo, gán và áp dụng ưu đãi đúng theo kịch bản."
+    },
+    {
+        "Use Case": "Security",
+        "TC ID": "TC_SEC_01",
+        "Tên kịch bản kiểm thử": "Kiểm tra lỗi Stored XSS trong phần Đánh giá sản phẩm",
+        "Mức độ ưu tiên": "Medium",
+        "Các bước thực hiện": "1. Vào một sản phẩm bất kỳ.2. Ở phần Review, nhập nội dung: <script>alert('XSS_Test_By_Shin')</script>. 3. Nhấn Submit. 4. Tải lại trang.",
+        "Dữ liệu kiểm thử": "nội dung: <script>alert('XSS_Test_By_Shin')</script>.",
+        "Kết quả mong đợi": "Hệ thống phải mã hóa đoạn code đó và hiển thị nó dưới dạng văn bản bình thường, không được hiện hộp thoại thông báo (alert)."
+    },
+    {
+        "Use Case": "Log check",
+        "TC ID": "TC_LOG_01",
+        "Tên kịch bản kiểm thử": "Kiểm tra xử lý số lượng âm",
+        "Mức độ ưu tiên": "High",
+        "Các bước thực hiện": "1. Thêm MacBook vào giỏ hàng. 2. Vào trang Giỏ hàng. 3. Dùng F12 để sửa giá trị số lượng thành -1. 4. Nhấn nút Update (Cập nhật).",
+        "Dữ liệu kiểm thử": " số lượng : -1.",
+        "Kết quả mong đợi": "Hệ thống phải báo lỗi hoặc tự động xóa sản phẩm, tuyệt đối không được trừ tiền vào tổng đơn hàng."
+    },
+    {
+        "Use Case": "Log check",
+        "TC ID": "TC_LOG_02",
+        "Tên kịch bản kiểm thử": "Kiểm tra lỗi tràn số ",
+        "Mức độ ưu tiên": "High",
+        "Các bước thực hiện": "1.Sử dụng F12 sửa số lượng thành 9.999.999.999.999.999.999,  2. sau đó nhấn Update.",
+        "Dữ liệu kiểm thử": "số lượng : 9.999.999.999.999.999.999",
+        "Kết quả mong đợi": "Hệ thống không bị treo (lỗi 500), không tính sai tổng tiền đơn hàng."
+    }
+]
